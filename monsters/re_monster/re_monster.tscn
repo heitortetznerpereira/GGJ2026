@@ -4,10 +4,11 @@
 [ext_resource type="Script" uid="uid://dkrdm2lge00jv" path="res://monsters/re_monster/re_monster.gd" id="1_py71m"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_py71m"]
+size = Vector2(32, 32)
 
-[node name="REMonster" type="CharacterBody2D" unique_id=84071906]
+[node name="REMonster" type="Area2D" unique_id=161077751]
 collision_layer = 0
-collision_mask = 0
+collision_mask = 4
 script = ExtResource("1_py71m")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1311285311]
@@ -17,4 +18,7 @@ scale = Vector2(0.25, 0.25)
 texture = ExtResource("1_g6put")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=750511185]
+position = Vector2(0, -16)
 shape = SubResource("RectangleShape2D_py71m")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

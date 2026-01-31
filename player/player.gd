@@ -7,17 +7,21 @@ const BASE_SPEED : float = 60
 @export var main_cam : Camera2D
 @export var stairs_area : Area2D
 @export var hud : HUD
+@export var weapon_pivot : Marker2D
 
-var inter_area : InterArea
 var speed := BASE_SPEED
+var mouse_pos : Vector2
 
 
 func _ready() -> void:
 	Global.player = self
 
 
-func _process(delta: float) -> void:
+func _physics_process(delta: float) -> void:
 	move(delta)
+	mouse_pos = get_global_mouse_position()
+	weapon_pivot.look_at(mouse_pos)
+	
 
 
 func move(delta : float):
@@ -50,5 +54,13 @@ func mask_opt():
 func start_re():
 	speed = BASE_SPEED
 	Global.map.start_re()
-	inter_area.queue_free()
-	inter_area = null
+
+
+func show_inter(text : String):
+	#hud.inter_lbl.show()
+	hud.inter_lbl.text = text
+
+
+func hide_inter():
+	#hud.inter_lbl.hide()
+	hud.inter_lbl.text = ""

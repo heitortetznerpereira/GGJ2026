@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://b3to25tjblx6v"]
+
+[ext_resource type="Script" uid="uid://d1vink7tegw6x" path="res://weapons/weapon.gd" id="1_kwm0t"]
+[ext_resource type="Texture2D" uid="uid://fsbn0ll5de5b" path="res://escopeta.png" id="2_64lnt"]
+
+[node name="Shotgun" type="CharacterBody2D" unique_id=1997454010]
+script = ExtResource("1_kwm0t")
+metadata/_custom_type_script = "uid://d1vink7tegw6x"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1040789856]
+texture = ExtResource("2_64lnt")
+offset = Vector2(0, -4)
+flip_h = true

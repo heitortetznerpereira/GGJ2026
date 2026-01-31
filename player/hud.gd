@@ -4,6 +4,7 @@ extends Control
 
 @export var player : Player
 @export var masks : Control
+@export var inter_lbl : Label
 
 
 func _ready() -> void:

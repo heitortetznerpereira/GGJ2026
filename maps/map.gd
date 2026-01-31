@@ -4,8 +4,7 @@ extends Node2D
 
 @export var tile_map : TileMapLayer
 @export var player : Player
-@export var phantom : Phantom
-@export var re_monster_s : PackedScene
+@export var re_manager : REManager
 
 
 func _ready() -> void:
@@ -14,7 +13,8 @@ func _ready() -> void:
 
 
 func start_re():
-	phantom.queue_free()
-	var re_monster : REMonster = re_monster_s.instantiate()
-	re_monster.position = phantom.position
-	add_child(re_monster)
+	re_manager.start_re()
+
+
+func game_over():
+	get_tree().quit()
