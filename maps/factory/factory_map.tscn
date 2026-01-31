@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://ckex4g7vjpghl"]
+
+[ext_resource type="Script" uid="uid://grrl5h1qrhem" path="res://maps/map.gd" id="1_451m2"]
+
+[node name="FactoryMap" type="Node2D" unique_id=1401396965]
+script = ExtResource("1_451m2")
+metadata/_custom_type_script = "uid://grrl5h1qrhem"
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1886072118]

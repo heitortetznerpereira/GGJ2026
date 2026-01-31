@@ -5,6 +5,8 @@ extends Node
 var map : Map
 @export var hub : Hub
 @export var b_map : PackedScene
+@export var tutorial : PackedScene
+@export var h_map : PackedScene
 
 
 func _ready() -> void:

@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://dvhogmvwldond" path="res://assets/tilesets/spr_tileset_b.png" id="2_j35kk"]
 [ext_resource type="TileSet" uid="uid://b6y2ac3e1gqyn" path="res://maps/stairs_tile.tres" id="3_tfvnq"]
 [ext_resource type="PackedScene" uid="uid://b51tkcnke32fs" path="res://player/player.tscn" id="4_j35kk"]
+[ext_resource type="PackedScene" uid="uid://ptcjr3me82k0" path="res://maps/items/door.tscn" id="5_tfvnq"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lw1ri"]
 texture = ExtResource("2_j35kk")
@@ -146,3 +147,9 @@ autowrap_mode = 3
 
 [node name="Player" parent="." unique_id=910214005 instance=ExtResource("4_j35kk")]
 position = Vector2(26, -38)
+
+[node name="Door" parent="." unique_id=814041143 instance=ExtResource("5_tfvnq")]
+position = Vector2(32, -16)
+
+[node name="Door2" parent="." unique_id=1085527182 instance=ExtResource("5_tfvnq")]
+position = Vector2(1616, -16)

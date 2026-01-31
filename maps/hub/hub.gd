@@ -18,3 +18,11 @@ func updt():
 		house_btn.disabled = true
 	if Global.f_key:
 		factory_btn.disabled = true
+
+
+func _on_tutorial_btn_pressed() -> void:
+	Global.main.load_map(Global.main.tutorial)
+
+
+func _on_house_btn_pressed() -> void:
+	Global.main.load_map(Global.main.h_map)
