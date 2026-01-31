@@ -7,9 +7,12 @@
 [ext_resource type="TileSet" uid="uid://b6y2ac3e1gqyn" path="res://maps/stairs_tile.tres" id="3_dfo5w"]
 [ext_resource type="PackedScene" uid="uid://bu17uw1f2baw8" path="res://monsters/phantom/phantom.tscn" id="6_f1shy"]
 [ext_resource type="Script" uid="uid://0k4m2jvpriua" path="res://monsters/re_monster/re_manager.gd" id="8_onapj"]
+[ext_resource type="PackedScene" uid="uid://bdchmp234udl6" path="res://monsters/fnaf_monster/fnaf_monster.tscn" id="9_b06sb"]
+[ext_resource type="PackedScene" uid="uid://ggu8rkn3pgq2" path="res://monsters/exorcism_monster/exorcism_monster.tscn" id="9_huvr1"]
 [ext_resource type="Script" uid="uid://beubheh72i3wv" path="res://monsters/fnaf_monster/fnaf_manager.gd" id="9_xsgik"]
 [ext_resource type="PackedScene" uid="uid://b3to25tjblx6v" path="res://weapons/shotgun.tscn" id="9_yl56a"]
 [ext_resource type="PackedScene" uid="uid://be6qw8hnthmbj" path="res://maps/items/window.tscn" id="10_xsgik"]
+[ext_resource type="Script" uid="uid://b4yq0qxffgf86" path="res://monsters/exorcism_monster/exorcism_manager.gd" id="12_mi8m4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bju83"]
 texture = ExtResource("2_cplqv")
@@ -50,10 +53,12 @@ metadata/_custom_type_script = "uid://0k4m2jvpriua"
 [node name="Shotgun" parent="." unique_id=1997454010 instance=ExtResource("9_yl56a")]
 position = Vector2(136, -104)
 
-[node name="FNAFManager" type="Node" parent="." unique_id=1518073252 node_paths=PackedStringArray("change_timer")]
+[node name="FNAFManager" type="Node" parent="." unique_id=1518073252 node_paths=PackedStringArray("change_timer", "phantom")]
 script = ExtResource("9_xsgik")
 change_timer = NodePath("Timer")
 move_chance = 1.0
+phantom = NodePath("../Phantom")
+monster_scene = ExtResource("9_b06sb")
 metadata/_custom_type_script = "uid://beubheh72i3wv"
 
 [node name="Timer" type="Timer" parent="FNAFManager" unique_id=2018354385]
@@ -71,3 +76,9 @@ position = Vector2(104, -16)
 
 [node name="Player" parent="." unique_id=910214005 instance=ExtResource("2_yploq")]
 position = Vector2(24, -24)
+
+[node name="ExManager" type="Node" parent="." unique_id=964597443 node_paths=PackedStringArray("phantom")]
+script = ExtResource("12_mi8m4")
+phantom = NodePath("../Phantom")
+monster_scene = ExtResource("9_huvr1")
+metadata/_custom_type_script = "uid://b4yq0qxffgf86"

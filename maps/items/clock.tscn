@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://bosb4etqkxqeq"]
+
+[ext_resource type="Script" uid="uid://bncxnvhbrsyr8" path="res://maps/items/obj.gd" id="1_qgsbn"]
+[ext_resource type="Texture2D" uid="uid://d3v8eynat77lb" path="res://assets/sprites/icon.svg" id="2_f56v6"]
+[ext_resource type="Script" uid="uid://icjf04lt7x84" path="res://util/inter_area.gd" id="3_f56v6"]
+
+[node name="Clock" type="Node2D" unique_id=447545450 node_paths=PackedStringArray("inter_area")]
+script = ExtResource("1_qgsbn")
+inter_area = NodePath("InterArea")
+metadata/_custom_type_script = "uid://bncxnvhbrsyr8"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1649002975]
+position = Vector2(0, -16)
+scale = Vector2(0.125, 0.25)
+texture = ExtResource("2_f56v6")
+
+[node name="InterArea" type="Area2D" parent="." unique_id=1096041900]
+script = ExtResource("3_f56v6")
+metadata/_custom_type_script = "uid://icjf04lt7x84"
