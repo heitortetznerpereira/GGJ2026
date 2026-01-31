@@ -4,7 +4,26 @@ extends Node
 
 @export var change_timer : Timer
 @export var change_time : float = 5
+@export_range(0, 1, 0.1) var move_chance : float = 0.5
+
+var windows : Array[GWindow]
+var curr_window : GWindow
 
 
 func start_fnaf():
 	pass
+
+
+func try_move():
+	var rng := randf()
+	if move_chance > rng:
+		atk_window()
+
+
+func atk_window():
+	if curr_window.state != GWindow.states.BOARD:
+		curr_window.attack()
+		return
+	curr_window.clear()
+	curr_window = windows.pick_random() as GWindow
+	curr_window.danger()
