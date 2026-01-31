@@ -25,6 +25,7 @@ func start():
 
 func on_monster_died():
 	for w in weapons:
-		w.queue_free()
+		if w.is_inside_tree():
+			w.queue_free()
 	Global.player.drop_weapon()
 	Global.map.win()

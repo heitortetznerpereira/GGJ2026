@@ -7,6 +7,7 @@ var map : Map
 @export var b_map : PackedScene
 @export var tutorial : PackedScene
 @export var h_map : PackedScene
+@export var f_map : PackedScene
 
 
 func _ready() -> void:

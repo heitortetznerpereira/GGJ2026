@@ -4,6 +4,7 @@ extends Area2D
 signal died()
 
 var speed : float = 40
+var stunned := false
 var velocity : Vector2
 var player : Player
 var health : float = 1
@@ -13,10 +14,11 @@ func _ready() -> void:
 
 
 func _physics_process(delta: float) -> void:
-	var dir := (player.global_position - global_position
-	).normalized()
-	velocity = dir * speed
-	global_position += velocity * delta
+	if not stunned:
+		var dir := (player.global_position - global_position
+		).normalized()
+		velocity = dir * speed
+		global_position += velocity * delta
 
 
 func _on_body_entered(body: Node2D) -> void:
@@ -29,3 +31,11 @@ func take_damage(dam : float):
 	if health <= 0:
 		died.emit()
 		queue_free()
+
+
+func stun(time : float):
+	stunned = true
+	get_tree().create_timer(time).timeout.connect(
+		func():
+			stunned = false
+	)

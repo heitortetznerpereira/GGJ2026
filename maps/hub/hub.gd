@@ -26,3 +26,7 @@ func _on_tutorial_btn_pressed() -> void:
 
 func _on_house_btn_pressed() -> void:
 	Global.main.load_map(Global.main.h_map)
+
+
+func _on_factory_btn_pressed() -> void:
+	Global.main.load_map(Global.main.f_map)

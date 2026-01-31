@@ -65,3 +65,4 @@ text = "WHERE DO YOU WANT TO GO?"
 [connection signal="pressed" from="HBoxContainer/TutorialBtn" to="." method="_on_tutorial_btn_pressed"]
 [connection signal="pressed" from="HBoxContainer/HouseBtn" to="." method="_on_house_btn_pressed"]
 [connection signal="pressed" from="HBoxContainer/BuildingBtn" to="." method="_on_building_btn_pressed"]
+[connection signal="pressed" from="HBoxContainer/FactoryBtn" to="." method="_on_factory_btn_pressed"]
