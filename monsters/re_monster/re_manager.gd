@@ -14,5 +14,7 @@ func start_re():
 	phantom.destroy()
 	monster = monster_scene.instantiate()
 	monster.global_position = phantom.global_position
+	monster.speed = speed
+	monster.health = health
 	await get_tree().create_timer(delay).timeout
 	add_child(monster)

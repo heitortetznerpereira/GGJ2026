@@ -8,9 +8,11 @@ const BASE_SPEED : float = 60
 @export var stairs_area : Area2D
 @export var hud : HUD
 @export var weapon_pivot : Marker2D
+@export var weapon_holder : Marker2D
 
 var speed := BASE_SPEED
 var mouse_pos : Vector2
+var weapon : Weapon
 
 
 func _ready() -> void:
@@ -21,6 +23,11 @@ func _physics_process(delta: float) -> void:
 	move(delta)
 	mouse_pos = get_global_mouse_position()
 	weapon_pivot.look_at(mouse_pos)
+	if weapon:
+		weapon.global_transform = weapon_holder.global_transform
+	if Input.is_action_just_pressed("attack"):
+		if weapon:
+			weapon.atk()
 	
 
 
@@ -48,6 +55,7 @@ func restrict_cam(tile_map : TileMapLayer):
 
 func mask_opt():
 	speed = 0
+	hide_inter()
 	hud.masks.show()
 
 
@@ -64,3 +72,7 @@ func show_inter(text : String):
 func hide_inter():
 	#hud.inter_lbl.hide()
 	hud.inter_lbl.text = ""
+
+
+func equip_weapon(new_weapon : Weapon):
+	weapon = new_weapon

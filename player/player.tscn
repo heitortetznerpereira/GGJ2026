@@ -3,20 +3,20 @@
 [ext_resource type="Script" uid="uid://biwlcv6bb6x8g" path="res://player/player.gd" id="1_rkbax"]
 [ext_resource type="Texture2D" uid="uid://fcvs0ghy7a3u" path="res://player/spr_player.png" id="2_g1dw6"]
 [ext_resource type="Script" uid="uid://dlp5mhes7osav" path="res://player/hud.gd" id="3_g1dw6"]
-[ext_resource type="PackedScene" uid="uid://b3to25tjblx6v" path="res://weapons/shotgun.tscn" id="4_yw30f"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rkbax"]
 size = Vector2(8, 16)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g1dw6"]
 
-[node name="Player" type="CharacterBody2D" unique_id=910214005 node_paths=PackedStringArray("main_cam", "stairs_area", "hud", "weapon_pivot")]
+[node name="Player" type="CharacterBody2D" unique_id=910214005 node_paths=PackedStringArray("main_cam", "stairs_area", "hud", "weapon_pivot", "weapon_holder")]
 collision_layer = 4
 script = ExtResource("1_rkbax")
 main_cam = NodePath("MainCam")
 stairs_area = NodePath("StairsArea")
 hud = NodePath("CanvasLayer/HUD")
 weapon_pivot = NodePath("WeaponPivot")
+weapon_holder = NodePath("WeaponPivot/WeaponHolder")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=802551471]
 position = Vector2(0, -8)
@@ -43,8 +43,6 @@ position = Vector2(0, -8)
 
 [node name="WeaponHolder" type="Marker2D" parent="WeaponPivot" unique_id=1600788270]
 position = Vector2(16, 0)
-
-[node name="Shotgun" parent="WeaponPivot/WeaponHolder" unique_id=1997454010 instance=ExtResource("4_yw30f")]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1858821593]
 

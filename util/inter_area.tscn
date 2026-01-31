@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://set3xnimmnl3"]
+
+[ext_resource type="Script" uid="uid://icjf04lt7x84" path="res://util/inter_area.gd" id="1_w7g30"]
+
+[node name="InterArea" type="Area2D" unique_id=1387767846]
+collision_layer = 0
+collision_mask = 4
+script = ExtResource("1_w7g30")
+metadata/_custom_type_script = "uid://icjf04lt7x84"

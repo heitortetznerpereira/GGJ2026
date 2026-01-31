@@ -1,22 +1,31 @@
 [gd_scene format=3 uid="uid://bu17uw1f2baw8"]
 
 [ext_resource type="Script" uid="uid://wpabcmy42e6d" path="res://monsters/phantom/phantom.gd" id="1_xr567"]
-[ext_resource type="Texture2D" uid="uid://bbi0ttgjwjjjj" path="res://assets/sprites/ghosts.png" id="2_fibky"]
+[ext_resource type="Texture2D" uid="uid://ddelfaws5g5j4" path="res://fantasma.png" id="2_ykdrl"]
+[ext_resource type="Script" uid="uid://icjf04lt7x84" path="res://util/inter_area.gd" id="3_fibky"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ykdrl"]
 size = Vector2(32, 32)
 
-[node name="Phantom" type="Area2D" unique_id=1524485945]
+[node name="Phantom" type="Area2D" unique_id=1524485945 node_paths=PackedStringArray("inter_area")]
 collision_layer = 0
 collision_mask = 4
 script = ExtResource("1_xr567")
+inter_area = NodePath("InterArea")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=220380501]
 modulate = Color(0.6745098, 1, 0.67058825, 1)
 position = Vector2(0, -16)
-texture = ExtResource("2_fibky")
-vframes = 4
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_ykdrl")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1195872896]
+[node name="InterArea" type="Area2D" parent="." unique_id=2108525381]
+collision_layer = 0
+collision_mask = 4
+script = ExtResource("3_fibky")
+text = "PRESS 'E' TO CHOOSE THE MASK"
+metadata/_custom_type_script = "uid://icjf04lt7x84"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InterArea" unique_id=1097564014]
 position = Vector2(0, -16)
 shape = SubResource("RectangleShape2D_ykdrl")

@@ -1,21 +1,33 @@
+@abstract
 class_name Weapon
 extends CharacterBody2D
 
 
-var picked := true
+@export var inter_area : InterArea
+var picked := false
 
 
 func pick():
 	picked = true
 	collision_layer = 0
+	inter_area.monitoring = false
 
 
 func drop():
 	picked = false
 	collision_layer = 8
+	inter_area.monitoring = true
 
 
 func _process(delta: float) -> void:
 	if not picked and not is_on_floor():
 		velocity.y += Global.gravity * delta
 		move_and_slide()
+	if Input.is_action_just_pressed(
+		"interact"
+	) and inter_area.player_on:
+		Global.player.equip_weapon(self)
+		pick()
+
+
+@abstract func atk()
