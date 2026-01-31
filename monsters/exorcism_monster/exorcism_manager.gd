@@ -25,11 +25,11 @@ func start():
 func on_obj_exorcised(obj : Obj):
 	if obj.haunted:
 		haunt_amount -= 1
-		if haunt_amount <= 0:
-			win()
-			return
-		if Global.player.holy_water == 0:
-			die()
+	if haunt_amount <= 0:
+		win()
+		return
+	if Global.player.holy_water == 0:
+		die()
 
 
 func win():

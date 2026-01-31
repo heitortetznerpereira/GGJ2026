@@ -5,6 +5,9 @@ extends Manager
 @export var change_timer : Timer
 @export var change_time : float = 5
 @export_range(0, 1, 0.1) var move_chance : float = 0.5
+@onready var laugh : AudioStream = load(
+	"res://assets/sound/evil_laugh.wav"
+)
 
 var windows : Array[GWindow]
 var curr_window : GWindow
@@ -16,6 +19,8 @@ func _ready() -> void:
 	windows.assign(get_tree().get_nodes_in_group("window"))
 	change_timer.wait_time = change_time
 	change_timer.timeout.connect(try_move)
+	Global.audio.stream = laugh
+	Global.audio.pitch_scale = 2
 
 
 func start():
@@ -34,6 +39,7 @@ func try_move():
 
 
 func atk_window():
+	Global.audio.play()
 	if curr_window:
 		if curr_window.state != GWindow.states.BOARD:
 			monster = monster_scene.instantiate()
@@ -64,3 +70,4 @@ func _process(delta: float) -> void:
 		Global.player.w_time = time
 		if time <= 0:
 			win()
+			started = false

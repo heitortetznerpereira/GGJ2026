@@ -10,6 +10,7 @@ enum states {
 
 @export var sprite : Sprite2D
 @export var inter_area : InterArea
+@export var hammer_sound : AudioStream
 
 var state := states.NORMAL
 var in_danger := false
@@ -60,6 +61,10 @@ func clear():
 func board():
 	boarded = true
 	change_state(states.BOARD)
+	Global.audio.stop()
+	Global.audio.stream = hammer_sound
+	Global.audio.pitch_scale = 2
+	Global.audio.play()
 
 
 func unboard():

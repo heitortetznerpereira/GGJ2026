@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://b51tkcnke32fs"]
 
 [ext_resource type="Script" uid="uid://biwlcv6bb6x8g" path="res://player/player.gd" id="1_rkbax"]
+[ext_resource type="AudioStream" uid="uid://dw0u03mbqsiu8" path="res://assets/sound/interact.wav" id="2_boad6"]
 [ext_resource type="Texture2D" uid="uid://fcvs0ghy7a3u" path="res://assets/sprites/spr_player.png" id="2_g1dw6"]
 [ext_resource type="Script" uid="uid://dlp5mhes7osav" path="res://player/hud.gd" id="3_g1dw6"]
 [ext_resource type="Texture2D" uid="uid://dhveoec32g2nk" path="res://Mascaras-1.png.png" id="4_yw30f"]
@@ -20,6 +21,7 @@ stairs_area = NodePath("StairsArea")
 hud = NodePath("CanvasLayer/HUD")
 weapon_pivot = NodePath("WeaponPivot")
 weapon_holder = NodePath("WeaponPivot/WeaponHolder")
+interact_sound = ExtResource("2_boad6")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=802551471]
 position = Vector2(0, -8)
@@ -188,7 +190,7 @@ offset_top = 48.0
 offset_right = 1864.0
 offset_bottom = 160.0
 theme_override_font_sizes/font_size = 40
-text = "3 HOLY WATER"
+text = "HOLY WATER : 3"
 
 [connection signal="pressed" from="CanvasLayer/HUD/Masks/HBoxContainer/ExBtn" to="CanvasLayer/HUD" method="_on_ex_btn_pressed"]
 [connection signal="pressed" from="CanvasLayer/HUD/Masks/HBoxContainer/REBtn" to="CanvasLayer/HUD" method="_on_re_btn_pressed"]

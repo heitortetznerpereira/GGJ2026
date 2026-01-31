@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://y0tcl4ygpcot" path="res://maps/hub/hub.gd" id="1_tn8io"]
 
-[node name="HUB" type="Control" unique_id=113184975 node_paths=PackedStringArray("building_btn", "house_btn", "factory_btn")]
+[node name="HUB" type="Control" unique_id=113184975 node_paths=PackedStringArray("building_btn", "house_btn", "factory_btn", "key_lbl")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -13,6 +13,7 @@ script = ExtResource("1_tn8io")
 building_btn = NodePath("HBoxContainer/BuildingBtn")
 house_btn = NodePath("HBoxContainer/HouseBtn")
 factory_btn = NodePath("HBoxContainer/FactoryBtn")
+key_lbl = NodePath("KeyLbl")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1181729583]
 layout_mode = 1
@@ -61,6 +62,22 @@ offset_bottom = 304.0
 grow_horizontal = 2
 theme_override_font_sizes/font_size = 40
 text = "WHERE DO YOU WANT TO GO?"
+
+[node name="KeyLbl" type="Label" parent="." unique_id=747019268]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -300.0
+offset_top = -184.0
+offset_right = 300.0
+offset_bottom = -72.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 40
+text = "0/3 keys obtained"
 
 [connection signal="pressed" from="HBoxContainer/TutorialBtn" to="." method="_on_tutorial_btn_pressed"]
 [connection signal="pressed" from="HBoxContainer/HouseBtn" to="." method="_on_house_btn_pressed"]

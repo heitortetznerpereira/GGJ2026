@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://iolx6jaclvsa"]
 
 [ext_resource type="Script" uid="uid://buiucqtyqe4a5" path="res://weapons/knife.gd" id="1_yyc7w"]
+[ext_resource type="AudioStream" uid="uid://4xpcit450sre" path="res://assets/sound/knife.wav" id="2_15312"]
 [ext_resource type="Texture2D" uid="uid://cob8drooislmj" path="res://assets/sprites/faca.png" id="2_mjnv2"]
 [ext_resource type="PackedScene" uid="uid://set3xnimmnl3" path="res://util/inter_area.tscn" id="3_j7a8k"]
 
@@ -13,6 +14,7 @@ size = Vector2(16, 16)
 collision_layer = 8
 script = ExtResource("1_yyc7w")
 ray = NodePath("RayCast2D")
+sound = ExtResource("2_15312")
 inter_area = NodePath("InterArea")
 
 [node name="RayCast2D" type="RayCast2D" parent="." unique_id=315361738]

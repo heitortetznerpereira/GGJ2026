@@ -6,6 +6,7 @@ var speed : float = 200
 var velocity : Vector2
 var player : Player
 
+
 func _ready() -> void:
 	player = Global.player
 	body_entered.connect(_on_body_entered)

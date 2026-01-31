@@ -40,4 +40,4 @@ func update_w_time(new_time : float):
 
 
 func updt_water(new_amount : int):
-	water_lbl.text = str(new_amount) + " HOLY WATER"
+	water_lbl.text = "HOLY WATER : " + str(new_amount)

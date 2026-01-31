@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cy0b18mxycqy8" path="res://weapons/shotgun.gd" id="1_64lnt"]
 [ext_resource type="Texture2D" uid="uid://fsbn0ll5de5b" path="res://assets/sprites/escopeta.png" id="2_64lnt"]
+[ext_resource type="AudioStream" uid="uid://df3106cq0kgq0" path="res://assets/sound/shotgun_shot.wav" id="2_ajl80"]
 [ext_resource type="PackedScene" uid="uid://set3xnimmnl3" path="res://util/inter_area.tscn" id="3_byptj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_64lnt"]
@@ -13,6 +14,7 @@ size = Vector2(16, 16)
 collision_layer = 8
 script = ExtResource("1_64lnt")
 ray = NodePath("RayCast2D")
+sound = ExtResource("2_ajl80")
 inter_area = NodePath("InterArea")
 metadata/_custom_type_script = "uid://d1vink7tegw6x"
 

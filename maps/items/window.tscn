@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://be6qw8hnthmbj"]
 
 [ext_resource type="Script" uid="uid://bcnxwyus0kc30" path="res://maps/items/window.gd" id="1_rgri1"]
+[ext_resource type="AudioStream" uid="uid://b1y2ehe0g14ve" path="res://assets/sound/hammer.wav" id="2_n6xql"]
 [ext_resource type="Texture2D" uid="uid://bwefhtyclbmox" path="res://Janela.png" id="2_rgri1"]
 [ext_resource type="PackedScene" uid="uid://set3xnimmnl3" path="res://util/inter_area.tscn" id="3_j74v0"]
 
@@ -11,12 +12,14 @@ size = Vector2(16, 16)
 script = ExtResource("1_rgri1")
 sprite = NodePath("Sprite2D")
 inter_area = NodePath("InterArea")
+hammer_sound = ExtResource("2_n6xql")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1649583254]
 position = Vector2(0, -16)
 texture = ExtResource("2_rgri1")
 hframes = 2
 vframes = 3
+frame = 2
 
 [node name="InterArea" parent="." unique_id=1387767846 instance=ExtResource("3_j74v0")]
 text = "PRESS 'E' TO INTERACT"

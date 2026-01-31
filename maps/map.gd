@@ -11,6 +11,11 @@ extends Node2D
 @export_enum("H", "B", "F") var id : String
 
 
+@onready var key_sound : AudioStream = load(
+	"res://assets/sound/key.wav"
+)
+
+
 func _ready() -> void:
 	Global.map = self
 	player.restrict_cam(tile_map)
@@ -36,6 +41,10 @@ func start_exorcism():
 
 func win():
 	key.start()
+	Global.audio.stop()
+	Global.audio.stream = key_sound
+	Global.audio.pitch_scale = 2
+	Global.audio.play()
 
 
 func game_over():

@@ -14,6 +14,13 @@ var h_key := false
 var b_key := false
 var f_key := false
 
+var audio : AudioStreamPlayer
+
+
+func _ready() -> void:
+	audio = AudioStreamPlayer.new()
+	add_child(audio)
+
 
 func add_key():
 	match Global.map.id:
@@ -23,3 +30,11 @@ func add_key():
 			b_key = true
 		"F":
 			f_key = true
+
+
+func play_audio(sound : AudioStream, pitch : float = 1, volume : float = 0):
+	audio.stop()
+	audio.pitch_scale = pitch
+	audio.stream = sound
+	audio.volume_db = volume
+	audio.play()

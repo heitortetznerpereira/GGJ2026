@@ -13,6 +13,7 @@ var map : Map
 func _ready() -> void:
 	Global.main = self
 	Engine.max_fps = 60
+	goto_hub()
 
 
 func load_map(map_scene : PackedScene):
@@ -23,5 +24,5 @@ func load_map(map_scene : PackedScene):
 
 func goto_hub():
 	hub.show()
-	map.queue_free()
+	if map : map.queue_free()
 	hub.updt()

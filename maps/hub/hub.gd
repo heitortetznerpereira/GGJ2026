@@ -5,6 +5,8 @@ extends Control
 @export var building_btn : Button
 @export var house_btn : Button
 @export var factory_btn : Button
+@export var key_lbl : Label
+var key_amount : int = 0
 
 
 func _on_building_btn_pressed() -> void:
@@ -12,12 +14,17 @@ func _on_building_btn_pressed() -> void:
 
 
 func updt():
+	key_amount = 0
 	if Global.b_key:
 		building_btn.disabled = true
+		key_amount += 1
 	if Global.h_key:
 		house_btn.disabled = true
+		key_amount += 1
 	if Global.f_key:
 		factory_btn.disabled = true
+		key_amount += 1
+	key_lbl.text = str(key_amount) + "/3 KEYS OBTAINED"
 
 
 func _on_tutorial_btn_pressed() -> void:

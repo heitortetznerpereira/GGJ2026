@@ -9,6 +9,7 @@ const BASE_SPEED : float = 60
 @export var hud : HUD
 @export var weapon_pivot : Marker2D
 @export var weapon_holder : Marker2D
+@export var interact_sound : AudioStream
 
 var speed := BASE_SPEED
 var mouse_pos : Vector2
@@ -44,6 +45,9 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("attack"):
 		if weapon:
 			weapon.atk()
+	
+	if Input.is_action_just_pressed("interact"):
+		Global.play_audio(interact_sound, 0.5, -10)
 	
 
 
