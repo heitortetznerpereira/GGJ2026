@@ -9,20 +9,25 @@ size = Vector2(8, 16)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g1dw6"]
 
 [node name="Player" type="CharacterBody2D" unique_id=910214005 node_paths=PackedStringArray("main_cam", "stairs_area")]
+collision_layer = 4
 script = ExtResource("1_rkbax")
 main_cam = NodePath("MainCam")
 stairs_area = NodePath("StairsArea")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=802551471]
+position = Vector2(0, -8)
 texture = ExtResource("2_g1dw6")
 
 [node name="MainCam" type="Camera2D" parent="." unique_id=1108463874]
+position = Vector2(0, -8)
 zoom = Vector2(8, 8)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1737355565]
+position = Vector2(0, -8)
 shape = SubResource("RectangleShape2D_rkbax")
 
 [node name="StairsArea" type="Area2D" parent="." unique_id=2081607411]
+position = Vector2(0, -8)
 collision_layer = 0
 collision_mask = 2
 

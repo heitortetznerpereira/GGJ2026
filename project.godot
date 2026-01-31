@@ -27,6 +27,10 @@ window/size/mode=3
 window/stretch/mode="viewport"
 window/stretch/aspect="ignore"
 
+[gui]
+
+theme/custom="uid://ckdd8lx3uodg4"
+
 [importer_defaults]
 
 texture={
@@ -95,6 +99,7 @@ interact={
 
 2d_physics/layer_1="world"
 2d_physics/layer_2="stairs"
+2d_physics/layer_3="player"
 
 [physics]
 

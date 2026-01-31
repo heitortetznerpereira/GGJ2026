@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://prs83wb4vj4p"]
+
+[ext_resource type="Texture2D" uid="uid://d3v8eynat77lb" path="res://icon.svg" id="1_g6put"]
+[ext_resource type="Script" uid="uid://dkrdm2lge00jv" path="res://monsters/re_monster/re_monster.gd" id="1_py71m"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_py71m"]
+
+[node name="REMonster" type="CharacterBody2D" unique_id=84071906]
+collision_layer = 0
+collision_mask = 0
+script = ExtResource("1_py71m")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1311285311]
+modulate = Color(1, 0, 0, 1)
+position = Vector2(0, -16)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_g6put")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=750511185]
+shape = SubResource("RectangleShape2D_py71m")

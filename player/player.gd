@@ -8,6 +8,10 @@ const BASE_SPEED : float = 60
 @export var stairs_area : Area2D
 
 
+func _ready() -> void:
+	Global.player = self
+
+
 func _process(delta: float) -> void:
 	move(delta)
 
@@ -16,7 +20,7 @@ func move(delta : float):
 	var input_dir := Input.get_vector("move_left", "move_right",
 	"move_up", "move_down")
 	velocity.x = input_dir.x * BASE_SPEED
-	if stairs_area.has_overlapping_bodies():
+	if stairs_area.has_overlapping_bodies() and input_dir.y:
 		velocity.y = input_dir.y * BASE_SPEED
 	elif not is_on_floor():
 		velocity.y += Global.gravity * delta
