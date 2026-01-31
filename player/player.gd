@@ -54,7 +54,7 @@ func restrict_cam(tile_map : TileMapLayer):
 	main_cam.limit_right = rect.end.x * size.x
 	main_cam.limit_bottom = rect.end.y * size.y
 
-
+''
 func mask_opt():
 	speed = 0
 	hide_inter()
