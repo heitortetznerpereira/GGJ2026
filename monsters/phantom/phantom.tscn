@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bu17uw1f2baw8"]
 
 [ext_resource type="Script" uid="uid://wpabcmy42e6d" path="res://monsters/phantom/phantom.gd" id="1_xr567"]
-[ext_resource type="Texture2D" uid="uid://d3v8eynat77lb" path="res://icon.svg" id="2_ykdrl"]
+[ext_resource type="Texture2D" uid="uid://bbi0ttgjwjjjj" path="res://assets/sprites/ghosts.png" id="2_fibky"]
 [ext_resource type="Script" uid="uid://icjf04lt7x84" path="res://util/inter_area.gd" id="3_fibky"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_q5ps1"]
@@ -11,16 +11,17 @@ size = Vector2(32, 32)
 script = ExtResource("1_xr567")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=220380501]
-modulate = Color(0, 1, 0, 1)
+modulate = Color(0.6745098, 1, 0.67058825, 1)
 position = Vector2(0, -16)
-scale = Vector2(0.25, 0.25)
-texture = ExtResource("2_ykdrl")
+texture = ExtResource("2_fibky")
+vframes = 4
 
-[node name="InterArea" type="Area2D" parent="." unique_id=1848405423 node_paths=PackedStringArray("label")]
+[node name="InterArea" type="Area2D" parent="." unique_id=1848405423 node_paths=PackedStringArray("label", "n_body")]
 collision_layer = 0
 collision_mask = 4
 script = ExtResource("3_fibky")
 label = NodePath("Label")
+n_body = NodePath("..")
 metadata/_custom_type_script = "uid://icjf04lt7x84"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InterArea" unique_id=1779091713]

@@ -1,6 +1,7 @@
 [gd_scene format=4 uid="uid://dhabjv545ouwt"]
 
 [ext_resource type="Script" uid="uid://grrl5h1qrhem" path="res://maps/map.gd" id="1_h04c8"]
+[ext_resource type="PackedScene" uid="uid://prs83wb4vj4p" path="res://monsters/re_monster/re_monster.tscn" id="2_bnirl"]
 [ext_resource type="Texture2D" uid="uid://dvhogmvwldond" path="res://maps/building/spr_tileset_b.png" id="2_cplqv"]
 [ext_resource type="PackedScene" uid="uid://b51tkcnke32fs" path="res://player/player.tscn" id="2_yploq"]
 [ext_resource type="TileSet" uid="uid://b6y2ac3e1gqyn" path="res://maps/stairs_tile.tres" id="3_dfo5w"]
@@ -18,10 +19,12 @@ texture = ExtResource("2_cplqv")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_bju83")
 
-[node name="Building" type="Node2D" unique_id=1541245829 node_paths=PackedStringArray("tile_map", "player")]
+[node name="Building" type="Node2D" unique_id=1541245829 node_paths=PackedStringArray("tile_map", "player", "phantom")]
 script = ExtResource("1_h04c8")
 tile_map = NodePath("PaintTile")
 player = NodePath("Player")
+phantom = NodePath("Phantom")
+re_monster_s = ExtResource("2_bnirl")
 metadata/_custom_type_script = "uid://grrl5h1qrhem"
 
 [node name="PaintTile" type="TileMapLayer" parent="." unique_id=74287315]

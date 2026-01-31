@@ -4,11 +4,15 @@ extends CharacterBody2D
 
 const BASE_SPEED : float = 40
 
-@export var target : Player
+var player : Player
+
+
+func _ready() -> void:
+	player = Global.player
 
 
 func _process(delta: float) -> void:
-	var dir := (target.global_position - global_position
+	var dir := (player.global_position - global_position
 	).normalized()
 	velocity = dir * BASE_SPEED
 	move_and_slide()
