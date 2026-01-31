@@ -8,6 +8,8 @@ extends Manager
 
 var windows : Array[GWindow]
 var curr_window : GWindow
+@export var time : float = 300
+var started := false
 
 
 func _ready() -> void:
@@ -17,6 +19,8 @@ func _ready() -> void:
 
 
 func start():
+	started = true
+	Global.player.show_windows()
 	phantom.queue_free()
 	for w in windows:
 		w.start()
@@ -41,3 +45,22 @@ func atk_window():
 		curr_window.clear()
 	curr_window = windows.pick_random() as GWindow
 	curr_window.danger()
+
+
+func win():
+	Global.player.hide_windows()
+	for w in windows:
+		w.clear()
+		w.change_state(GWindow.states.NORMAL)
+		w.stop()
+	change_timer.stop()
+	if monster:
+		monster.queue_free()
+	Global.map.win()
+
+func _process(delta: float) -> void:
+	if started:
+		time -= delta
+		Global.player.w_time = time
+		if time <= 0:
+			win()

@@ -27,6 +27,11 @@ func start():
 	started = true
 
 
+func stop():
+	inter_area.monitoring = false
+	started = false
+
+
 func change_state(new_state : states):
 	state = new_state
 	match state:

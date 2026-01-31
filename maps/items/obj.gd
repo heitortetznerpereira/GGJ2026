@@ -1,7 +1,7 @@
 class_name Obj
 extends Node2D
 
-signal exorcised
+signal exorcised(obj : Obj)
 
 @export var sprite : Sprite2D
 @export var inter_area : InterArea
@@ -25,12 +25,13 @@ func haunt():
 
 
 func exorcise():
+	Global.player.holy_water -= 1
+	exorcised.emit(self)
 	sprite.frame = 0
 	inter_area.queue_free()
 	started = false
 	if haunted:
 		haunted = false
-		exorcised.emit()
 
 func _process(delta: float) -> void:
 	if started:

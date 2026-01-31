@@ -27,3 +27,4 @@ func on_monster_died():
 	for w in weapons:
 		w.queue_free()
 	Global.player.drop_weapon()
+	Global.map.win()

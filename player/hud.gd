@@ -6,6 +6,10 @@ extends Control
 @export var masks : Control
 @export var inter_lbl : Label
 @export var board_lbl : Label
+@export var w_time_lbl : Label
+@export var windows : Control
+@export var exor : Control
+@export var water_lbl : Label
 
 
 func _ready() -> void:
@@ -29,3 +33,11 @@ func _on_fnaf_btn_pressed() -> void:
 
 func updt_boards(new_amount : int):
 	board_lbl.text = str(new_amount) + " BOARDS"
+
+
+func update_w_time(new_time : float):
+	w_time_lbl.text = str(int(new_time)) + " SECONDS LEFT"
+
+
+func updt_water(new_amount : int):
+	water_lbl.text = str(new_amount) + " HOLY WATER"

@@ -11,4 +11,5 @@ func atk():
 	if ray.is_colliding():
 		var col := ray.get_collider()
 		if col is REMonster:
+			hit.emit()
 			col.take_damage(DAMAGE)

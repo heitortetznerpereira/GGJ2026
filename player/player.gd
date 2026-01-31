@@ -4,7 +4,7 @@ extends CharacterBody2D
 
 const BASE_SPEED : float = 60
 
-@export var main_cam : Camera2D
+@export var main_cam : Camera2D 
 @export var stairs_area : Area2D
 @export var hud : HUD
 @export var weapon_pivot : Marker2D
@@ -13,12 +13,30 @@ const BASE_SPEED : float = 60
 var speed := BASE_SPEED
 var mouse_pos : Vector2
 var weapon : Weapon
-var boards : int = 3
+var boards : int = 3 :
+	set(value):
+		boards = value
+		hud.updt_boards(boards)
+var holy_water : int = 3 :
+	set(value):
+		holy_water = value
+		hud.updt_water(holy_water)
+var w_time : float = 300:
+	set(value):
+		w_time = value
+		hud.update_w_time(w_time)
+
+var h_key := false
+var b_key := false
+var f_key := false
 
 
 func _ready() -> void:
 	Global.player = self
-	
+	hide_windows()
+	hide_inter()
+	set_exor(false)
+	hud.updt_boards(boards)
 
 
 func _physics_process(delta: float) -> void:
@@ -94,3 +112,25 @@ func drop_weapon():
 	if weapon:
 		weapon.drop()
 	weapon = null
+
+
+func show_windows():
+	hud.windows.show()
+
+
+func hide_windows():
+	hud.windows.hide()
+
+
+func set_exor(v : bool):
+	hud.exor.visible = v
+
+
+func add_key():
+	match Global.map.id:
+		"H":
+			h_key = true
+		"B":
+			b_key = true
+		"F":
+			f_key = true

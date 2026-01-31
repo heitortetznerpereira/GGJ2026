@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://nibnusevfc8h"]
+
+[ext_resource type="Texture2D" uid="uid://d3v8eynat77lb" path="res://assets/sprites/icon.svg" id="1_bwuip"]
+[ext_resource type="Script" uid="uid://psjkcme3resm" path="res://maps/items/key.gd" id="1_dpk68"]
+[ext_resource type="PackedScene" uid="uid://set3xnimmnl3" path="res://util/inter_area.tscn" id="3_hfqeu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hfqeu"]
+
+[node name="Key" type="Node2D" unique_id=1203054507 node_paths=PackedStringArray("inter_area") groups=["key"]]
+script = ExtResource("1_dpk68")
+inter_area = NodePath("InterArea")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=893459838]
+position = Vector2(0, -8.000001)
+scale = Vector2(0.08000046, 0.08000046)
+texture = ExtResource("1_bwuip")
+
+[node name="InterArea" parent="." unique_id=1387767846 instance=ExtResource("3_hfqeu")]
+text = "PRESS 'E' TO PICK THE KEY"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InterArea" unique_id=670116777]
+shape = SubResource("RectangleShape2D_hfqeu")
