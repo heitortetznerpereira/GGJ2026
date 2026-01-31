@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://bdchmp234udl6"]
+
+[ext_resource type="Script" uid="uid://ceklwxyy564j8" path="res://monsters/fnaf_monster/fnaf_monster.gd" id="1_yh4eq"]
+[ext_resource type="Texture2D" uid="uid://df8de2xi0kb45" path="res://assets/sprites/monstroAzul.png" id="2_tou1j"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iw1ev"]
+size = Vector2(6.9728427, 24.64662)
+
+[node name="FnafMonster" type="Area2D" unique_id=324970402]
+script = ExtResource("1_yh4eq")
+metadata/_custom_type_script = "uid://ceklwxyy564j8"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=10568490]
+position = Vector2(0, -14)
+texture = ExtResource("2_tou1j")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2025684668]
+position = Vector2(-1.9999998, -13.500001)
+scale = Vector2(1.4341353, 1.095485)
+shape = SubResource("RectangleShape2D_iw1ev")
