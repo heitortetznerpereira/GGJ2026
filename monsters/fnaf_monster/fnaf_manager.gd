@@ -19,8 +19,6 @@ func _ready() -> void:
 	windows.assign(get_tree().get_nodes_in_group("window"))
 	change_timer.wait_time = change_time
 	change_timer.timeout.connect(try_move)
-	Global.audio.stream = laugh
-	Global.audio.pitch_scale = 2
 
 
 func start():
@@ -39,7 +37,7 @@ func try_move():
 
 
 func atk_window():
-	Global.audio.play()
+	Global.play_audio(laugh, 2)
 	if curr_window:
 		if curr_window.state != GWindow.states.BOARD:
 			monster = monster_scene.instantiate()
@@ -62,6 +60,7 @@ func win():
 	change_timer.stop()
 	if monster:
 		monster.queue_free()
+	Global.won_fnaf = true
 	Global.map.win()
 
 func _process(delta: float) -> void:

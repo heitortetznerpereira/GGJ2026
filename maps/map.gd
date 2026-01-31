@@ -48,4 +48,4 @@ func win():
 
 
 func game_over():
-	get_tree().quit()
+	Global.main.goto_gameover()

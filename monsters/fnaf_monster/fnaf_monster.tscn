@@ -6,10 +6,11 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_iw1ev"]
 size = Vector2(6.9728427, 24.64662)
 
-[node name="FnafMonster" type="Area2D" unique_id=324970402]
+[node name="FnafMonster" type="Area2D" unique_id=324970402 node_paths=PackedStringArray("sprite")]
 collision_layer = 16
 collision_mask = 4
 script = ExtResource("1_yh4eq")
+sprite = NodePath("Sprite2D")
 metadata/_custom_type_script = "uid://ceklwxyy564j8"
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=10568490]

@@ -3,6 +3,9 @@ extends Area2D
 
 signal died()
 
+@export var sprite : Sprite2D
+@export var anim_control : AnimationPlayer
+
 var speed : float = 40
 var stunned := false
 var velocity : Vector2
@@ -17,6 +20,7 @@ func _physics_process(delta: float) -> void:
 	if not stunned:
 		var dir := (player.global_position - global_position
 		).normalized()
+		sprite.flip_h = dir.x > 0
 		velocity = dir * speed
 		global_position += velocity * delta
 
@@ -35,7 +39,9 @@ func take_damage(dam : float):
 
 func stun(time : float):
 	stunned = true
+	anim_control.play("dam")
 	get_tree().create_timer(time).timeout.connect(
 		func():
 			stunned = false
+			anim_control.stop()
 	)

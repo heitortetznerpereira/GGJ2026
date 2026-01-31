@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dapgs58c8sife" path="res://weapons/bear_trap.gd" id="1_8sfdl"]
 [ext_resource type="Texture2D" uid="uid://dnuxavsr5adff" path="res://assets/sprites/armadilha urso.png" id="1_rxqc5"]
+[ext_resource type="AudioStream" uid="uid://csct4v04snsf" path="res://assets/sound/bear_trap.wav" id="2_2wrtc"]
 [ext_resource type="PackedScene" uid="uid://set3xnimmnl3" path="res://util/inter_area.tscn" id="2_8sfdl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x0ann"]
@@ -18,6 +19,7 @@ collision_layer = 8
 script = ExtResource("1_8sfdl")
 damage_area = NodePath("DamageArea")
 sprite = NodePath("Sprite2D")
+sound = ExtResource("2_2wrtc")
 inter_area = NodePath("InterArea")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=977599772]

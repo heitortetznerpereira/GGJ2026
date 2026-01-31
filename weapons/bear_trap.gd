@@ -7,6 +7,7 @@ const STUN : float = 5
 
 @export var damage_area : Area2D
 @export var sprite : Sprite2D
+@export var sound : AudioStream
 
 
 func _ready() -> void:
@@ -23,6 +24,7 @@ func atk():
 
 func on_area_entered(area : Area2D):
 	if area is REMonster:
+		Global.play_audio(sound)
 		area.take_damage(DAMAGE)
 		area.stun(STUN)
 		queue_free()

@@ -33,6 +33,7 @@ func on_obj_exorcised(obj : Obj):
 
 
 func win():
+	Global.won_ex = true
 	Global.player.set_exor(false)
 	Global.map.win()
 

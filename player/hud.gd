@@ -10,6 +10,9 @@ extends Control
 @export var windows : Control
 @export var exor : Control
 @export var water_lbl : Label
+@export var ex_btn : Button
+@export var re_btn : Button
+@export var fnaf_btn : Button
 
 
 func _ready() -> void:
@@ -41,3 +44,9 @@ func update_w_time(new_time : float):
 
 func updt_water(new_amount : int):
 	water_lbl.text = "HOLY WATER : " + str(new_amount)
+
+
+func updt():
+	ex_btn.disabled = Global.won_ex
+	re_btn.disabled = Global.won_re
+	fnaf_btn.disabled = Global.won_fnaf

@@ -8,15 +8,17 @@
 [ext_resource type="PackedScene" uid="uid://ckex4g7vjpghl" path="res://maps/factory/factory_map.tscn" id="5_kfbq2"]
 [ext_resource type="PackedScene" uid="uid://d222xgfo4ooer" path="res://maps/win_lose/game_over.tscn" id="7_4dugh"]
 
-[node name="Main" type="Node" unique_id=1438083808 node_paths=PackedStringArray("hub")]
+[node name="Main" type="Node" unique_id=1438083808 node_paths=PackedStringArray("hub", "game_over")]
 script = ExtResource("1_ig7tw")
 hub = NodePath("HUB")
 b_map = ExtResource("2_0xm2m")
 tutorial = ExtResource("3_c651c")
 h_map = ExtResource("4_3wy1v")
 f_map = ExtResource("5_kfbq2")
+game_over = NodePath("GameOver")
 
 [node name="HUB" parent="." unique_id=113184975 instance=ExtResource("3_xwkvk")]
+visible = false
 
 [node name="GameOver" parent="." unique_id=1823599069 instance=ExtResource("7_4dugh")]
 visible = false

@@ -35,10 +35,11 @@ func drop():
 	picked = false
 	collision_layer = 8
 	inter_area.monitoring = true
+	global_rotation = 0
 
 
 func _process(delta: float) -> void:
-	if not picked and not is_on_floor():
+	if not picked:
 		velocity.y += Global.gravity * delta
 		move_and_slide()
 	if Input.is_action_just_pressed(

@@ -16,6 +16,10 @@ var f_key := false
 
 var audio : AudioStreamPlayer
 
+var won_ex := false
+var won_re := false
+var won_fnaf := false
+
 
 func _ready() -> void:
 	audio = AudioStreamPlayer.new()

@@ -28,4 +28,5 @@ func on_monster_died():
 		if is_instance_valid(w):
 			w.queue_free()
 	Global.player.drop_weapon()
+	Global.won_re = true
 	Global.map.win()

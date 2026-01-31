@@ -6,10 +6,11 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_m1rqu"]
 size = Vector2(18, 30)
 
-[node name="ExorcismMonster" type="Area2D" unique_id=716960636]
+[node name="ExorcismMonster" type="Area2D" unique_id=716960636 node_paths=PackedStringArray("sprite")]
 collision_layer = 16
 collision_mask = 4
 script = ExtResource("1_kim57")
+sprite = NodePath("Sprite2D")
 metadata/_custom_type_script = "uid://4eqp7jn2finv"
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=188218772]

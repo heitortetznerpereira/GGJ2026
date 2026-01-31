@@ -13,7 +13,7 @@ size = Vector2(8, 16)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g1dw6"]
 
-[node name="Player" type="CharacterBody2D" unique_id=910214005 node_paths=PackedStringArray("main_cam", "stairs_area", "hud", "weapon_pivot", "weapon_holder")]
+[node name="Player" type="CharacterBody2D" unique_id=910214005 node_paths=PackedStringArray("main_cam", "stairs_area", "hud", "weapon_pivot", "weapon_holder", "sprite")]
 collision_layer = 4
 script = ExtResource("1_rkbax")
 main_cam = NodePath("MainCam")
@@ -22,6 +22,7 @@ hud = NodePath("CanvasLayer/HUD")
 weapon_pivot = NodePath("WeaponPivot")
 weapon_holder = NodePath("WeaponPivot/WeaponHolder")
 interact_sound = ExtResource("2_boad6")
+sprite = NodePath("Sprite2D")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=802551471]
 position = Vector2(0, -8)
@@ -51,7 +52,7 @@ position = Vector2(16, 0)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1858821593]
 
-[node name="HUD" type="Control" parent="CanvasLayer" unique_id=1505060073 node_paths=PackedStringArray("player", "masks", "inter_lbl", "board_lbl", "w_time_lbl", "windows", "exor", "water_lbl")]
+[node name="HUD" type="Control" parent="CanvasLayer" unique_id=1505060073 node_paths=PackedStringArray("player", "masks", "inter_lbl", "board_lbl", "w_time_lbl", "windows", "exor", "water_lbl", "ex_btn", "re_btn", "fnaf_btn")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -67,6 +68,9 @@ w_time_lbl = NodePath("Windows/WTimeLbl")
 windows = NodePath("Windows")
 exor = NodePath("Exor")
 water_lbl = NodePath("Exor/HolyWaterLbl")
+ex_btn = NodePath("Masks/HBoxContainer/ExBtn")
+re_btn = NodePath("Masks/HBoxContainer/REBtn")
+fnaf_btn = NodePath("Masks/HBoxContainer/FNAFBtn")
 
 [node name="Masks" type="Control" parent="CanvasLayer/HUD" unique_id=2051493043]
 layout_mode = 1

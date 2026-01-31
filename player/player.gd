@@ -10,6 +10,7 @@ const BASE_SPEED : float = 60
 @export var weapon_pivot : Marker2D
 @export var weapon_holder : Marker2D
 @export var interact_sound : AudioStream
+@export var sprite : Sprite2D
 
 var speed := BASE_SPEED
 var mouse_pos : Vector2
@@ -56,6 +57,8 @@ func move(delta : float):
 		Input.get_axis("move_left", "move_right"),
 		Input.get_axis("move_up", "move_down")
 	)
+	if input_dir.x != 0:
+		sprite.flip_h = input_dir.x < 0
 	
 	velocity.x = input_dir.x * speed
 	if stairs_area.has_overlapping_bodies() and input_dir.y:
@@ -77,6 +80,7 @@ func restrict_cam(tile_map : TileMapLayer):
 func mask_opt():
 	speed = 0
 	hide_inter()
+	hud.updt()
 	hud.masks.show()
 
 
