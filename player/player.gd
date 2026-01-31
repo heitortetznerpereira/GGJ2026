@@ -71,6 +71,11 @@ func start_fnaf():
 	Global.map.start_fnaf()
 
 
+func start_ex():
+	speed = BASE_SPEED
+	Global.map.start_exorcism()
+
+
 func show_inter(text : String):
 	#hud.inter_lbl.show()
 	hud.inter_lbl.text = text

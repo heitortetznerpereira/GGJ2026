@@ -32,7 +32,11 @@ func try_move():
 func atk_window():
 	if curr_window:
 		if curr_window.state != GWindow.states.BOARD:
-			curr_window.attack()
+			monster = monster_scene.instantiate()
+			monster.global_position = (
+				curr_window.global_position
+			)
+			add_child(monster)
 			return
 		curr_window.clear()
 	curr_window = windows.pick_random() as GWindow

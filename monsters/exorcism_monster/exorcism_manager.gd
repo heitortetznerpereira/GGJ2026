@@ -8,7 +8,10 @@ var non_haunt_obj : Array[Obj]
 
 
 func start():
-	objects.assign(get_tree().get_nodes_in_group("object"))
+	phantom.queue_free()
+	objects.assign(get_tree().get_nodes_in_group("obj"))
+	for i in objects:
+		i.start()
 	non_haunt_obj.assign(objects)
 	for i in haunt_amount:
 		var choose := non_haunt_obj.pick_random() as Obj

@@ -18,6 +18,7 @@ func _on_re_btn_pressed() -> void:
 
 
 func _on_ex_btn_pressed() -> void:
+	player.start_ex()
 	masks.hide()
 
 

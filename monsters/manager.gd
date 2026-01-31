@@ -5,7 +5,7 @@ extends Node
 
 @export var phantom : Phantom
 @export var monster_scene : PackedScene
-var monster : REMonster
+var monster : Area2D
 
 
 @abstract func start()
