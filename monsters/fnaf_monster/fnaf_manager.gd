@@ -1,8 +1,7 @@
 class_name FNAFManager
-extends Node
+extends Manager
 
 
-@export var phantom : Phantom
 @export var change_timer : Timer
 @export var change_time : float = 5
 @export_range(0, 1, 0.1) var move_chance : float = 0.5
@@ -17,7 +16,7 @@ func _ready() -> void:
 	change_timer.timeout.connect(try_move)
 
 
-func start_fnaf():
+func start():
 	phantom.queue_free()
 	for w in windows:
 		w.start()
@@ -33,7 +32,11 @@ func try_move():
 func atk_window():
 	if curr_window:
 		if curr_window.state != GWindow.states.BOARD:
-			curr_window.attack()
+			monster = monster_scene.instantiate()
+			monster.global_position = (
+				curr_window.global_position
+			)
+			add_child(monster)
 			return
 		curr_window.clear()
 	curr_window = windows.pick_random() as GWindow

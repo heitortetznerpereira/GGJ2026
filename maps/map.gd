@@ -6,6 +6,7 @@ extends Node2D
 @export var player : Player
 @export var re_manager: REManager
 @export var fnaf_manager : FNAFManager
+@export var exorcism_manager : ExManager
 
 
 func _ready() -> void:
@@ -14,11 +15,15 @@ func _ready() -> void:
 
 
 func start_re():
-	re_manager.start_re()
+	re_manager.start()
 
 
 func start_fnaf():
-	fnaf_manager.start_fnaf()
+	fnaf_manager.start()
+
+
+func start_exorcism():
+	exorcism_manager.start()
 
 
 func game_over():

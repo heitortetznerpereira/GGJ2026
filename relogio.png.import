@@ -2,20 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-<<<<<<< HEAD
-uid="uid://bqh1ox0am181k"
-=======
-uid="uid://0wqwm4n174ot"
->>>>>>> 5d03a63a70f25f33ccac40fdb55763be29c39698
-path="res://.godot/imported/Mascaras-2.png.png-e0922925811ccdd064c05fa0ec33dc35.ctex"
+uid="uid://dol20077aum4m"
+path="res://.godot/imported/relogio.png-068b246a2fbaa98e004adcf90cad1b6f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Mascaras-2.png.png"
-dest_files=["res://.godot/imported/Mascaras-2.png.png-e0922925811ccdd064c05fa0ec33dc35.ctex"]
+source_file="res://relogio.png"
+dest_files=["res://.godot/imported/relogio.png-068b246a2fbaa98e004adcf90cad1b6f.ctex"]
 
 [params]
 

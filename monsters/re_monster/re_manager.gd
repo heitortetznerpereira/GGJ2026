@@ -1,17 +1,15 @@
 class_name REManager
-extends Node
+extends Manager
 
 
-@export var phantom : Phantom
-@export var monster_scene : PackedScene
-var monster : REMonster
+
 @export var health : float = 10
 @export var speed : float = 20
 @export var delay : float = 3
 var weapons : Array[Weapon]
 
 
-func start_re():
+func start():
 	phantom.queue_free()
 	monster = monster_scene.instantiate()
 	monster.died.connect(on_monster_died)
