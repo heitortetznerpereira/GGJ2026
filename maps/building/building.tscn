@@ -15,6 +15,8 @@
 [ext_resource type="Script" uid="uid://b4yq0qxffgf86" path="res://monsters/exorcism_monster/exorcism_manager.gd" id="12_mi8m4"]
 [ext_resource type="PackedScene" uid="uid://bosb4etqkxqeq" path="res://maps/items/clock.tscn" id="14_jfx8p"]
 [ext_resource type="PackedScene" uid="uid://nibnusevfc8h" path="res://maps/items/key.tscn" id="15_a684g"]
+[ext_resource type="PackedScene" uid="uid://iolx6jaclvsa" path="res://weapons/knife.tscn" id="16_44n8o"]
+[ext_resource type="PackedScene" uid="uid://ptcjr3me82k0" path="res://maps/items/door.tscn" id="17_jjd4i"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bju83"]
 texture = ExtResource("2_cplqv")
@@ -48,6 +50,9 @@ tile_set = ExtResource("3_dfo5w")
 
 [node name="Phantom" parent="." unique_id=1524485945 instance=ExtResource("6_f1shy")]
 position = Vector2(160, -16)
+
+[node name="Door" parent="." unique_id=814041143 instance=ExtResource("17_jjd4i")]
+position = Vector2(24, -16)
 
 [node name="REManager" type="Node" parent="." unique_id=1889434027 node_paths=PackedStringArray("phantom")]
 script = ExtResource("8_onapj")
@@ -106,4 +111,7 @@ position = Vector2(112, -80)
 position = Vector2(24, -24)
 
 [node name="Key" parent="." unique_id=1203054507 instance=ExtResource("15_a684g")]
-position = Vector2(24, -16)
+position = Vector2(40, -16)
+
+[node name="Knife" parent="." unique_id=111442576 instance=ExtResource("16_44n8o")]
+position = Vector2(200, -88)

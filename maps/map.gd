@@ -17,14 +17,20 @@ func _ready() -> void:
 
 
 func start_re():
+	for i in get_tree().get_nodes_in_group("door"):
+		i.lock()
 	re_manager.start()
 
 
 func start_fnaf():
+	for i in get_tree().get_nodes_in_group("door"):
+		i.lock()
 	fnaf_manager.start()
 
 
 func start_exorcism():
+	for i in get_tree().get_nodes_in_group("door"):
+		i.lock()
 	exorcism_manager.start()
 
 

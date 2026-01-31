@@ -3,9 +3,9 @@
 [ext_resource type="Script" uid="uid://biwlcv6bb6x8g" path="res://player/player.gd" id="1_rkbax"]
 [ext_resource type="Texture2D" uid="uid://fcvs0ghy7a3u" path="res://assets/sprites/spr_player.png" id="2_g1dw6"]
 [ext_resource type="Script" uid="uid://dlp5mhes7osav" path="res://player/hud.gd" id="3_g1dw6"]
-[ext_resource type="Texture2D" uid="uid://tq46nvo8g4v0" path="res://Mascaras-1.png.png" id="4_yw30f"]
-[ext_resource type="Texture2D" uid="uid://bqh1ox0am181k" path="res://Mascaras-2.png.png" id="5_qjkh3"]
-[ext_resource type="Texture2D" uid="uid://bj2wwae113mr7" path="res://Mascaras-3.png.png" id="6_g6k8r"]
+[ext_resource type="Texture2D" uid="uid://dhveoec32g2nk" path="res://Mascaras-1.png.png" id="4_yw30f"]
+[ext_resource type="Texture2D" uid="uid://b2kwtau2r4s6" path="res://Mascaras-2.png.png" id="5_qjkh3"]
+[ext_resource type="Texture2D" uid="uid://cxh6e6v3bn8cp" path="res://Mascaras-3.png.png" id="6_g6k8r"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rkbax"]
 size = Vector2(8, 16)

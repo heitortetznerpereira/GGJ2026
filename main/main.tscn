@@ -2,8 +2,11 @@
 
 [ext_resource type="Script" uid="uid://dohnvuu85sg5a" path="res://main/main.gd" id="1_ig7tw"]
 [ext_resource type="PackedScene" uid="uid://dhabjv545ouwt" path="res://maps/building/building.tscn" id="2_0xm2m"]
+[ext_resource type="PackedScene" uid="uid://dauq6tw7wfq61" path="res://maps/hub/hub.tscn" id="3_xwkvk"]
 
-[node name="Main" type="Node" unique_id=1438083808]
+[node name="Main" type="Node" unique_id=1438083808 node_paths=PackedStringArray("hub")]
 script = ExtResource("1_ig7tw")
+hub = NodePath("HUB")
+b_map = ExtResource("2_0xm2m")
 
-[node name="Building" parent="." unique_id=1541245829 instance=ExtResource("2_0xm2m")]
+[node name="HUB" parent="." unique_id=113184975 instance=ExtResource("3_xwkvk")]

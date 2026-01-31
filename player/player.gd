@@ -26,10 +26,6 @@ var w_time : float = 300:
 		w_time = value
 		hud.update_w_time(w_time)
 
-var h_key := false
-var b_key := false
-var f_key := false
-
 
 func _ready() -> void:
 	Global.player = self
@@ -72,7 +68,7 @@ func restrict_cam(tile_map : TileMapLayer):
 	main_cam.limit_right = rect.end.x * size.x
 	main_cam.limit_bottom = rect.end.y * size.y
 
-''
+
 func mask_opt():
 	speed = 0
 	hide_inter()
@@ -105,6 +101,7 @@ func hide_inter():
 
 
 func equip_weapon(new_weapon : Weapon):
+	drop_weapon()
 	weapon = new_weapon
 
 
@@ -124,13 +121,3 @@ func hide_windows():
 
 func set_exor(v : bool):
 	hud.exor.visible = v
-
-
-func add_key():
-	match Global.map.id:
-		"H":
-			h_key = true
-		"B":
-			b_key = true
-		"F":
-			f_key = true

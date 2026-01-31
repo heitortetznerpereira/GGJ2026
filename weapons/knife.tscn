@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://iolx6jaclvsa"]
+
+[ext_resource type="Script" uid="uid://buiucqtyqe4a5" path="res://weapons/knife.gd" id="1_yyc7w"]
+[ext_resource type="Texture2D" uid="uid://cob8drooislmj" path="res://assets/sprites/faca.png" id="2_mjnv2"]
+[ext_resource type="PackedScene" uid="uid://set3xnimmnl3" path="res://util/inter_area.tscn" id="3_j7a8k"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_15312"]
+size = Vector2(16, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_j7a8k"]
+
+[node name="Knife" type="CharacterBody2D" unique_id=111442576 node_paths=PackedStringArray("ray", "inter_area")]
+collision_layer = 8
+script = ExtResource("1_yyc7w")
+ray = NodePath("RayCast2D")
+inter_area = NodePath("InterArea")
+
+[node name="RayCast2D" type="RayCast2D" parent="." unique_id=315361738]
+target_position = Vector2(16, 0)
+collision_mask = 16
+hit_from_inside = true
+collide_with_areas = true
+collide_with_bodies = false
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=102590107]
+position = Vector2(8, -1)
+texture = ExtResource("2_mjnv2")
+flip_h = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1211596617]
+shape = SubResource("RectangleShape2D_15312")
+
+[node name="InterArea" parent="." unique_id=1387767846 instance=ExtResource("3_j7a8k")]
+text = "PRESS 'E' TO PICK THE KNIFE"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InterArea" unique_id=102747154]
+position = Vector2(8, 0)
+shape = SubResource("RectangleShape2D_j7a8k")

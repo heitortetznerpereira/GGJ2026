@@ -20,4 +20,6 @@ func _process(delta: float) -> void:
 		"interact"
 	):
 		queue_free()
-		Global.player.add_key()
+		Global.add_key()
+		for i in get_tree().get_nodes_in_group("door"):
+			i.unlock()
