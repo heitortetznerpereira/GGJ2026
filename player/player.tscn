@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://b51tkcnke32fs"]
+
+[ext_resource type="Script" uid="uid://biwlcv6bb6x8g" path="res://player/player.gd" id="1_rkbax"]
+[ext_resource type="Texture2D" uid="uid://fcvs0ghy7a3u" path="res://player/spr_player.png" id="2_g1dw6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rkbax"]
+size = Vector2(8, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g1dw6"]
+
+[node name="Player" type="CharacterBody2D" unique_id=910214005 node_paths=PackedStringArray("main_cam", "stairs_area")]
+script = ExtResource("1_rkbax")
+main_cam = NodePath("MainCam")
+stairs_area = NodePath("StairsArea")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=802551471]
+texture = ExtResource("2_g1dw6")
+
+[node name="MainCam" type="Camera2D" parent="." unique_id=1108463874]
+zoom = Vector2(8, 8)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1737355565]
+shape = SubResource("RectangleShape2D_rkbax")
+
+[node name="StairsArea" type="Area2D" parent="." unique_id=2081607411]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StairsArea" unique_id=754765987]
+shape = SubResource("RectangleShape2D_g1dw6")
