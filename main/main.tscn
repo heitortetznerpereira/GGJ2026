@@ -6,9 +6,11 @@
 [ext_resource type="PackedScene" uid="uid://dauq6tw7wfq61" path="res://maps/hub/hub.tscn" id="3_xwkvk"]
 [ext_resource type="PackedScene" uid="uid://dh6rxgp83wfhp" path="res://maps/house/house.tscn" id="4_3wy1v"]
 [ext_resource type="PackedScene" uid="uid://ckex4g7vjpghl" path="res://maps/factory/factory_map.tscn" id="5_kfbq2"]
+[ext_resource type="AudioStream" uid="uid://b5hosnasvj28w" path="res://assets/sound/game_over.wav" id="6_67ri8"]
 [ext_resource type="PackedScene" uid="uid://d222xgfo4ooer" path="res://maps/win_lose/game_over.tscn" id="7_4dugh"]
+[ext_resource type="PackedScene" uid="uid://8yia5j66f4xu" path="res://maps/win_lose/victory.tscn" id="9_grrlh"]
 
-[node name="Main" type="Node" unique_id=1438083808 node_paths=PackedStringArray("hub", "game_over")]
+[node name="Main" type="Node" unique_id=1438083808 node_paths=PackedStringArray("hub", "game_over", "victory")]
 script = ExtResource("1_ig7tw")
 hub = NodePath("HUB")
 b_map = ExtResource("2_0xm2m")
@@ -16,9 +18,13 @@ tutorial = ExtResource("3_c651c")
 h_map = ExtResource("4_3wy1v")
 f_map = ExtResource("5_kfbq2")
 game_over = NodePath("GameOver")
+game_over_sound = ExtResource("6_67ri8")
+victory = NodePath("Victory")
 
 [node name="HUB" parent="." unique_id=113184975 instance=ExtResource("3_xwkvk")]
 visible = false
 
 [node name="GameOver" parent="." unique_id=1823599069 instance=ExtResource("7_4dugh")]
 visible = false
+
+[node name="Victory" parent="." unique_id=444105446 instance=ExtResource("9_grrlh")]

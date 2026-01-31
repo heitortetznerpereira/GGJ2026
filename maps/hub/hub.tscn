@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://y0tcl4ygpcot" path="res://maps/hub/hub.gd" id="1_tn8io"]
 
-[node name="HUB" type="Control" unique_id=113184975 node_paths=PackedStringArray("building_btn", "house_btn", "factory_btn", "key_lbl")]
+[node name="HUB" type="Control" unique_id=113184975 node_paths=PackedStringArray("building_btn", "house_btn", "factory_btn", "key_lbl", "escape_btn")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -14,6 +14,7 @@ building_btn = NodePath("HBoxContainer/BuildingBtn")
 house_btn = NodePath("HBoxContainer/HouseBtn")
 factory_btn = NodePath("HBoxContainer/FactoryBtn")
 key_lbl = NodePath("KeyLbl")
+escape_btn = NodePath("EscapeBtn")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1181729583]
 layout_mode = 1
@@ -79,7 +80,24 @@ grow_vertical = 0
 theme_override_font_sizes/font_size = 40
 text = "0/3 keys obtained"
 
+[node name="EscapeBtn" type="Button" parent="." unique_id=401456132]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -132.0
+offset_top = -312.0
+offset_right = 132.0
+offset_bottom = -192.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 40
+text = "Escape!"
+
 [connection signal="pressed" from="HBoxContainer/TutorialBtn" to="." method="_on_tutorial_btn_pressed"]
 [connection signal="pressed" from="HBoxContainer/HouseBtn" to="." method="_on_house_btn_pressed"]
 [connection signal="pressed" from="HBoxContainer/BuildingBtn" to="." method="_on_building_btn_pressed"]
 [connection signal="pressed" from="HBoxContainer/FactoryBtn" to="." method="_on_factory_btn_pressed"]
+[connection signal="pressed" from="EscapeBtn" to="." method="_on_escape_btn_pressed"]

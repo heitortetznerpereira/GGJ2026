@@ -40,8 +40,10 @@ func take_damage(dam : float):
 func stun(time : float):
 	stunned = true
 	anim_control.play("dam")
+	monitoring = false
 	get_tree().create_timer(time).timeout.connect(
 		func():
 			stunned = false
 			anim_control.stop()
+			monitoring = true
 	)

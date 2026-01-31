@@ -7,6 +7,11 @@ extends Control
 @export var factory_btn : Button
 @export var key_lbl : Label
 var key_amount : int = 0
+@export var escape_btn : Button
+
+
+func _ready() -> void:
+	escape_btn.hide()
 
 
 func _on_building_btn_pressed() -> void:
@@ -25,6 +30,8 @@ func updt():
 		factory_btn.disabled = true
 		key_amount += 1
 	key_lbl.text = str(key_amount) + "/3 KEYS OBTAINED"
+	if key_amount == 3:
+		escape_btn.show()
 
 
 func _on_tutorial_btn_pressed() -> void:
@@ -37,3 +44,7 @@ func _on_house_btn_pressed() -> void:
 
 func _on_factory_btn_pressed() -> void:
 	Global.main.load_map(Global.main.f_map)
+
+
+func _on_escape_btn_pressed() -> void:
+	Global.main.goto_victory()

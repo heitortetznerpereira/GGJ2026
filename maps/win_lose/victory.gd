@@ -1,0 +1,6 @@
+class_name Victory
+extends Control
+
+
+func _on_quit_btn_pressed() -> void:
+	get_tree().quit()

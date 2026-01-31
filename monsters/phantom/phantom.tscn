@@ -1,17 +1,22 @@
 [gd_scene format=3 uid="uid://bu17uw1f2baw8"]
 
 [ext_resource type="Script" uid="uid://wpabcmy42e6d" path="res://monsters/phantom/phantom.gd" id="1_xr567"]
+[ext_resource type="Texture2D" uid="uid://5r08yprhjnlr" path="res://assets/sprites/Altar.png" id="2_q5ps1"]
 [ext_resource type="Texture2D" uid="uid://ddelfaws5g5j4" path="res://assets/sprites/fantasma.png" id="2_ykdrl"]
 [ext_resource type="Script" uid="uid://icjf04lt7x84" path="res://util/inter_area.gd" id="3_fibky"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ykdrl"]
-size = Vector2(32, 32)
+size = Vector2(64, 32)
 
 [node name="Phantom" type="Area2D" unique_id=1524485945 node_paths=PackedStringArray("inter_area")]
 collision_layer = 0
 collision_mask = 4
 script = ExtResource("1_xr567")
 inter_area = NodePath("InterArea")
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=1666842824]
+position = Vector2(24, -16)
+texture = ExtResource("2_q5ps1")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=220380501]
 position = Vector2(0, -16)
@@ -26,5 +31,5 @@ text = "PRESS 'E' TO CHOOSE THE MASK"
 metadata/_custom_type_script = "uid://icjf04lt7x84"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InterArea" unique_id=1097564014]
-position = Vector2(0, -16)
+position = Vector2(16, -16)
 shape = SubResource("RectangleShape2D_ykdrl")
