@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dhveoec32g2nk"
-path="res://.godot/imported/Mascaras-1.png.png-90a08c9a65652edcf14dc1a6bde72db2.ctex"
+uid="uid://cud42olx1m21m"
+path="res://.godot/imported/porta.png-d31a5fc52684828befc7e6cc6e16c7b1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Mascaras-1.png.png"
-dest_files=["res://.godot/imported/Mascaras-1.png.png-90a08c9a65652edcf14dc1a6bde72db2.ctex"]
+source_file="res://porta.png"
+dest_files=["res://.godot/imported/porta.png-d31a5fc52684828befc7e6cc6e16c7b1.ctex"]
 
 [params]
 

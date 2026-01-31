@@ -14,6 +14,9 @@
 [ext_resource type="PackedScene" uid="uid://be6qw8hnthmbj" path="res://maps/items/window.tscn" id="10_xsgik"]
 [ext_resource type="Script" uid="uid://b4yq0qxffgf86" path="res://monsters/exorcism_monster/exorcism_manager.gd" id="12_mi8m4"]
 [ext_resource type="PackedScene" uid="uid://bosb4etqkxqeq" path="res://maps/items/clock.tscn" id="14_jfx8p"]
+[ext_resource type="PackedScene" uid="uid://nibnusevfc8h" path="res://maps/items/key.tscn" id="15_a684g"]
+[ext_resource type="PackedScene" uid="uid://iolx6jaclvsa" path="res://weapons/knife.tscn" id="16_44n8o"]
+[ext_resource type="PackedScene" uid="uid://ptcjr3me82k0" path="res://maps/items/door.tscn" id="17_jjd4i"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bju83"]
 texture = ExtResource("2_cplqv")
@@ -26,13 +29,15 @@ texture = ExtResource("2_cplqv")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_bju83")
 
-[node name="Building" type="Node2D" unique_id=1541245829 node_paths=PackedStringArray("tile_map", "player", "re_manager", "fnaf_manager", "exorcism_manager")]
+[node name="Building" type="Node2D" unique_id=1541245829 node_paths=PackedStringArray("tile_map", "player", "re_manager", "fnaf_manager", "exorcism_manager", "key")]
 script = ExtResource("1_h04c8")
 tile_map = NodePath("PaintTile")
 player = NodePath("Player")
 re_manager = NodePath("REManager")
 fnaf_manager = NodePath("FNAFManager")
 exorcism_manager = NodePath("ExManager")
+key = NodePath("Key")
+id = "B"
 metadata/_custom_type_script = "uid://grrl5h1qrhem"
 
 [node name="PaintTile" type="TileMapLayer" parent="." unique_id=74287315]
@@ -45,6 +50,9 @@ tile_set = ExtResource("3_dfo5w")
 
 [node name="Phantom" parent="." unique_id=1524485945 instance=ExtResource("6_f1shy")]
 position = Vector2(160, -16)
+
+[node name="Door" parent="." unique_id=814041143 instance=ExtResource("17_jjd4i")]
+position = Vector2(24, -16)
 
 [node name="REManager" type="Node" parent="." unique_id=1889434027 node_paths=PackedStringArray("phantom")]
 script = ExtResource("8_onapj")
@@ -59,6 +67,7 @@ position = Vector2(136, -104)
 script = ExtResource("9_xsgik")
 change_timer = NodePath("Timer")
 move_chance = 1.0
+time = 10.0
 phantom = NodePath("../Phantom")
 monster_scene = ExtResource("9_b06sb")
 metadata/_custom_type_script = "uid://beubheh72i3wv"
@@ -78,6 +87,8 @@ position = Vector2(104, -16)
 
 [node name="ExManager" type="Node" parent="." unique_id=964597443 node_paths=PackedStringArray("phantom")]
 script = ExtResource("12_mi8m4")
+haunt_amount = 2
+holy_water = 3
 phantom = NodePath("../Phantom")
 monster_scene = ExtResource("9_huvr1")
 metadata/_custom_type_script = "uid://b4yq0qxffgf86"
@@ -98,3 +109,9 @@ position = Vector2(112, -80)
 
 [node name="Player" parent="." unique_id=910214005 instance=ExtResource("2_yploq")]
 position = Vector2(24, -24)
+
+[node name="Key" parent="." unique_id=1203054507 instance=ExtResource("15_a684g")]
+position = Vector2(40, -16)
+
+[node name="Knife" parent="." unique_id=111442576 instance=ExtResource("16_44n8o")]
+position = Vector2(200, -88)

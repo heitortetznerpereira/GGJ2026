@@ -4,7 +4,7 @@ extends CharacterBody2D
 
 const BASE_SPEED : float = 60
 
-@export var main_cam : Camera2D
+@export var main_cam : Camera2D 
 @export var stairs_area : Area2D
 @export var hud : HUD
 @export var weapon_pivot : Marker2D
@@ -13,12 +13,26 @@ const BASE_SPEED : float = 60
 var speed := BASE_SPEED
 var mouse_pos : Vector2
 var weapon : Weapon
-var boards : int = 3
+var boards : int = 3 :
+	set(value):
+		boards = value
+		hud.updt_boards(boards)
+var holy_water : int = 3 :
+	set(value):
+		holy_water = value
+		hud.updt_water(holy_water)
+var w_time : float = 300:
+	set(value):
+		w_time = value
+		hud.update_w_time(w_time)
 
 
 func _ready() -> void:
 	Global.player = self
-	
+	hide_windows()
+	hide_inter()
+	set_exor(false)
+	hud.updt_boards(boards)
 
 
 func _physics_process(delta: float) -> void:
@@ -54,7 +68,7 @@ func restrict_cam(tile_map : TileMapLayer):
 	main_cam.limit_right = rect.end.x * size.x
 	main_cam.limit_bottom = rect.end.y * size.y
 
-''
+
 func mask_opt():
 	speed = 0
 	hide_inter()
@@ -87,6 +101,7 @@ func hide_inter():
 
 
 func equip_weapon(new_weapon : Weapon):
+	drop_weapon()
 	weapon = new_weapon
 
 
@@ -94,3 +109,15 @@ func drop_weapon():
 	if weapon:
 		weapon.drop()
 	weapon = null
+
+
+func show_windows():
+	hud.windows.show()
+
+
+func hide_windows():
+	hud.windows.hide()
+
+
+func set_exor(v : bool):
+	hud.exor.visible = v

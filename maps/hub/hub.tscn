@@ -1,12 +1,18 @@
 [gd_scene format=3 uid="uid://dauq6tw7wfq61"]
 
-[node name="HUB" type="Control" unique_id=113184975]
+[ext_resource type="Script" uid="uid://y0tcl4ygpcot" path="res://maps/hub/hub.gd" id="1_tn8io"]
+
+[node name="HUB" type="Control" unique_id=113184975 node_paths=PackedStringArray("building_btn", "house_btn", "factory_btn")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_tn8io")
+building_btn = NodePath("HBoxContainer/BuildingBtn")
+house_btn = NodePath("HBoxContainer/HouseBtn")
+factory_btn = NodePath("HBoxContainer/FactoryBtn")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1181729583]
 layout_mode = 1
@@ -55,3 +61,5 @@ offset_bottom = 304.0
 grow_horizontal = 2
 theme_override_font_sizes/font_size = 40
 text = "WHERE DO YOU WANT TO GO?"
+
+[connection signal="pressed" from="HBoxContainer/BuildingBtn" to="." method="_on_building_btn_pressed"]

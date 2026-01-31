@@ -2,6 +2,7 @@
 class_name Weapon
 extends CharacterBody2D
 
+signal hit
 
 @export var inter_area : InterArea
 var picked := false
@@ -11,6 +12,12 @@ func _ready() -> void:
 	hide()
 	add_to_group("weapon")
 	inter_area.monitoring = false
+	hit.connect(on_hit)
+
+
+func on_hit():
+	Global.player.drop_weapon()
+	queue_free()
 
 
 func activate():

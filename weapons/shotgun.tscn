@@ -22,7 +22,7 @@ offset = Vector2(0, -4)
 flip_h = true
 
 [node name="RayCast2D" type="RayCast2D" parent="." unique_id=2036834798]
-target_position = Vector2(64, 0)
+target_position = Vector2(128, 0)
 collision_mask = 16
 collide_with_areas = true
 collide_with_bodies = false
