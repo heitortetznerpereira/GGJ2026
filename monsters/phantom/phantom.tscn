@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bu17uw1f2baw8"]
 
 [ext_resource type="Script" uid="uid://wpabcmy42e6d" path="res://monsters/phantom/phantom.gd" id="1_xr567"]
-[ext_resource type="Texture2D" uid="uid://ddelfaws5g5j4" path="res://fantasma.png" id="2_ykdrl"]
+[ext_resource type="Texture2D" uid="uid://ddelfaws5g5j4" path="res://assets/sprites/fantasma.png" id="2_ykdrl"]
 [ext_resource type="Script" uid="uid://icjf04lt7x84" path="res://util/inter_area.gd" id="3_fibky"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ykdrl"]

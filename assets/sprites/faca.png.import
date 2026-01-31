@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://2egvfh2wiu2j"
-path="res://.godot/imported/monstroVermelho.png-092c0114fc6ef6fe9b6f72f644d6c648.ctex"
+uid="uid://cob8drooislmj"
+path="res://.godot/imported/faca.png-91225b643b9d0cd18a6ae9551d9c88c2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://monstroVermelho.png"
-dest_files=["res://.godot/imported/monstroVermelho.png-092c0114fc6ef6fe9b6f72f644d6c648.ctex"]
+source_file="res://assets/sprites/faca.png"
+dest_files=["res://.godot/imported/faca.png-91225b643b9d0cd18a6ae9551d9c88c2.ctex"]
 
 [params]
 

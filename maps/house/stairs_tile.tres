@@ -1,6 +1,6 @@
 [gd_resource type="TileSet" format=3 uid="uid://b6y2ac3e1gqyn"]
 
-[ext_resource type="Texture2D" uid="uid://bx5ugab7f73or" path="res://maps/spr_stairs.png" id="1_7dc2a"]
+[ext_resource type="Texture2D" uid="uid://bx5ugab7f73or" path="res://assets/tilesets/spr_stairs.png" id="1_7dc2a"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_bju83"]
 vertices = PackedVector2Array(8, 8, -8, 8, -8, -8, 8, -8)

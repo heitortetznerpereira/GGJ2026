@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dvhogmvwldond"
-path="res://.godot/imported/spr_tileset_b.png-1756170ecbbe8fe47294aa463770c285.ctex"
+uid="uid://df8de2xi0kb45"
+path="res://.godot/imported/monstroAzul.png-9b6e36bac3f59bd0947aaa18ca26d19b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://maps/building/spr_tileset_b.png"
-dest_files=["res://.godot/imported/spr_tileset_b.png-1756170ecbbe8fe47294aa463770c285.ctex"]
+source_file="res://assets/sprites/monstroAzul.png"
+dest_files=["res://.godot/imported/monstroAzul.png-9b6e36bac3f59bd0947aaa18ca26d19b.ctex"]
 
 [params]
 

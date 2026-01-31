@@ -10,7 +10,7 @@ extends Control
 func _ready() -> void:
 	masks.hide()
 
-
+''
 func _on_re_btn_pressed() -> void:
 	player.start_re()
 	masks.hide()

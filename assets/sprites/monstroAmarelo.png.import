@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dnuxavsr5adff"
-path="res://.godot/imported/armadilha urso.png-0a328353d51611ae91e5952cf98e91e6.ctex"
+uid="uid://dpvqjigljxxsm"
+path="res://.godot/imported/monstroAmarelo.png-cd785478505793d4fcde6e00623c0363.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://armadilha urso.png"
-dest_files=["res://.godot/imported/armadilha urso.png-0a328353d51611ae91e5952cf98e91e6.ctex"]
+source_file="res://assets/sprites/monstroAmarelo.png"
+dest_files=["res://.godot/imported/monstroAmarelo.png-cd785478505793d4fcde6e00623c0363.ctex"]
 
 [params]
 

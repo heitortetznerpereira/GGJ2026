@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://prs83wb4vj4p"]
 
 [ext_resource type="Script" uid="uid://dkrdm2lge00jv" path="res://monsters/re_monster/re_monster.gd" id="1_py71m"]
-[ext_resource type="Texture2D" uid="uid://2egvfh2wiu2j" path="res://monstroVermelho.png" id="2_py71m"]
+[ext_resource type="Texture2D" uid="uid://2egvfh2wiu2j" path="res://assets/sprites/monstroVermelho.png" id="2_py71m"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_py71m"]
 size = Vector2(32, 32)

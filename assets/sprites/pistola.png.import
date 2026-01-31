@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cob8drooislmj"
-path="res://.godot/imported/faca.png-c60b5043713480f2056db31b99ba4059.ctex"
+uid="uid://dkuwtdf6p0yq7"
+path="res://.godot/imported/pistola.png-35d137f686fb075732b312ee200651e7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://faca.png"
-dest_files=["res://.godot/imported/faca.png-c60b5043713480f2056db31b99ba4059.ctex"]
+source_file="res://assets/sprites/pistola.png"
+dest_files=["res://.godot/imported/pistola.png-35d137f686fb075732b312ee200651e7.ctex"]
 
 [params]
 

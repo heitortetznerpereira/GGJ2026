@@ -1,6 +1,6 @@
 [gd_resource type="TileSet" format=3 uid="uid://bqkvafq38vn6w"]
 
-[ext_resource type="Texture2D" uid="uid://buq0pbqkp8pj3" path="res://maps/spr_logic_tile.png" id="1_r6sbq"]
+[ext_resource type="Texture2D" uid="uid://buq0pbqkp8pj3" path="res://assets/sprites/spr_logic_tile.png" id="1_r6sbq"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_dfo5w"]
 vertices = PackedVector2Array(8, 8, -8, 8, -8, -8, 8, -8)

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://fcvs0ghy7a3u"
-path="res://.godot/imported/spr_player.png-94e4fde9db28433ba184422592a45ef7.ctex"
+uid="uid://db0mhv8cfky3p"
+path="res://.godot/imported/janela+sofa.png-8e495056c82b87db35e4c19f83c15875.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://player/spr_player.png"
-dest_files=["res://.godot/imported/spr_player.png-94e4fde9db28433ba184422592a45ef7.ctex"]
+source_file="res://assets/tilesets/janela+sofa.png"
+dest_files=["res://.godot/imported/janela+sofa.png-8e495056c82b87db35e4c19f83c15875.ctex"]
 
 [params]
 

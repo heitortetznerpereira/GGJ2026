@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://b3to25tjblx6v"]
 
 [ext_resource type="Script" uid="uid://cy0b18mxycqy8" path="res://weapons/shotgun.gd" id="1_64lnt"]
-[ext_resource type="Texture2D" uid="uid://fsbn0ll5de5b" path="res://escopeta.png" id="2_64lnt"]
+[ext_resource type="Texture2D" uid="uid://fsbn0ll5de5b" path="res://assets/sprites/escopeta.png" id="2_64lnt"]
 [ext_resource type="PackedScene" uid="uid://set3xnimmnl3" path="res://util/inter_area.tscn" id="3_byptj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_64lnt"]

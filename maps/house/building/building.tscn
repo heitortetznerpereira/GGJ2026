@@ -1,11 +1,10 @@
 [gd_scene format=4 uid="uid://dhabjv545ouwt"]
 
-[ext_resource type="Script" uid="uid://grrl5h1qrhem" path="res://maps/map.gd" id="1_h04c8"]
+[ext_resource type="Script" uid="uid://grrl5h1qrhem" path="res://maps/house/map.gd" id="1_h04c8"]
 [ext_resource type="PackedScene" uid="uid://prs83wb4vj4p" path="res://monsters/re_monster/re_monster.tscn" id="2_bnirl"]
-[ext_resource type="Texture2D" uid="uid://dvhogmvwldond" path="res://maps/building/spr_tileset_b.png" id="2_cplqv"]
+[ext_resource type="Texture2D" uid="uid://dvhogmvwldond" path="res://assets/tilesets/spr_tileset_b.png" id="2_cplqv"]
 [ext_resource type="PackedScene" uid="uid://b51tkcnke32fs" path="res://player/player.tscn" id="2_yploq"]
-[ext_resource type="TileSet" uid="uid://b6y2ac3e1gqyn" path="res://maps/stairs_tile.tres" id="3_dfo5w"]
-[ext_resource type="TileSet" uid="uid://bqkvafq38vn6w" path="res://maps/logic_tile.tres" id="4_dfo5w"]
+[ext_resource type="TileSet" uid="uid://b6y2ac3e1gqyn" path="res://maps/house/stairs_tile.tres" id="3_dfo5w"]
 [ext_resource type="PackedScene" uid="uid://bu17uw1f2baw8" path="res://monsters/phantom/phantom.tscn" id="6_f1shy"]
 [ext_resource type="Script" uid="uid://0k4m2jvpriua" path="res://monsters/re_monster/re_manager.gd" id="8_onapj"]
 [ext_resource type="PackedScene" uid="uid://b3to25tjblx6v" path="res://weapons/shotgun.tscn" id="9_yl56a"]
@@ -21,11 +20,10 @@ texture = ExtResource("2_cplqv")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_bju83")
 
-[node name="Building" type="Node2D" unique_id=1541245829 node_paths=PackedStringArray("tile_map", "player", "re_manager")]
+[node name="Building" type="Node2D" unique_id=1541245829 node_paths=PackedStringArray("tile_map", "player")]
 script = ExtResource("1_h04c8")
 tile_map = NodePath("PaintTile")
 player = NodePath("Player")
-re_manager = NodePath("REManager")
 metadata/_custom_type_script = "uid://grrl5h1qrhem"
 
 [node name="PaintTile" type="TileMapLayer" parent="." unique_id=74287315]
@@ -35,10 +33,6 @@ tile_set = SubResource("TileSet_dfo5w")
 [node name="Stairs" type="TileMapLayer" parent="." unique_id=1003042703]
 tile_map_data = PackedByteArray("AAADAPv/AAAAAAAAAAADAPz/AAAAAAAAAAADAP3/AAAAAAAAAAADAP7/AAAAAAAAAAA=")
 tile_set = ExtResource("3_dfo5w")
-
-[node name="LogicTile" type="TileMapLayer" parent="." unique_id=702847444]
-visible = false
-tile_set = ExtResource("4_dfo5w")
 
 [node name="Player" parent="." unique_id=910214005 instance=ExtResource("2_yploq")]
 position = Vector2(24, -24)

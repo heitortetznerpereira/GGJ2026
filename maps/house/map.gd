@@ -4,7 +4,7 @@ extends Node2D
 
 @export var tile_map : TileMapLayer
 @export var player : Player
-@export var re_manager : REManager
+@onready var re_manager: REManager = $REManager
 
 
 func _ready() -> void:

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://fsbn0ll5de5b"
-path="res://.godot/imported/escopeta.png-f49389a5528bca0d252afdedfc3e375d.ctex"
+uid="uid://d57p001kgg0t"
+path="res://.godot/imported/TilesetCasa.png-ed7db687dad13880de33d9359d7fa43c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://escopeta.png"
-dest_files=["res://.godot/imported/escopeta.png-f49389a5528bca0d252afdedfc3e375d.ctex"]
+source_file="res://assets/tilesets/TilesetCasa.png"
+dest_files=["res://.godot/imported/TilesetCasa.png-ed7db687dad13880de33d9359d7fa43c.ctex"]
 
 [params]
 

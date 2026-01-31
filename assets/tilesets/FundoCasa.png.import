@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dkuwtdf6p0yq7"
-path="res://.godot/imported/pistola.png-88dd6b7badaa81ff7e62d1608159999b.ctex"
+uid="uid://7rrtpxe1878y"
+path="res://.godot/imported/FundoCasa.png-f0735871eb8188c25244f5a654fccdc7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://pistola.png"
-dest_files=["res://.godot/imported/pistola.png-88dd6b7badaa81ff7e62d1608159999b.ctex"]
+source_file="res://assets/tilesets/FundoCasa.png"
+dest_files=["res://.godot/imported/FundoCasa.png-f0735871eb8188c25244f5a654fccdc7.ctex"]
 
 [params]
 
