@@ -116,7 +116,7 @@ offset_right = 1230.0
 offset_bottom = 96.0
 theme_override_colors/font_color = Color(0, 0, 1, 1)
 theme_override_constants/outline_size = 0
-text = "HE RED MASKED ONE APPRECIATES BRAVERY"
+text = "THE RED MASKED ONE APPRECIATES BRAVERY"
 horizontal_alignment = 1
 autowrap_mode = 3
 
