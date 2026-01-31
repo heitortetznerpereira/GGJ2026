@@ -77,7 +77,6 @@ position = Vector2(-24, 0)
 position = Vector2(216, -106)
 
 [node name="Phantom" parent="." unique_id=1524485945 instance=ExtResource("10_2qju6")]
-modulate = Color(0.7121294, 0.7121294, 0.71212935, 1)
 position = Vector2(296, -48)
 
 [node name="Weapons" type="Node2D" parent="." unique_id=190123268]

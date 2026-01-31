@@ -5,6 +5,9 @@ signal exorcised(obj : Obj)
 
 @export var sprite : Sprite2D
 @export var inter_area : InterArea
+@onready var water_sound : AudioStream = load(
+	"res://assets/sound/water.wav"
+)
 var started := false
 var haunted := false
 
@@ -26,6 +29,7 @@ func haunt():
 
 func exorcise():
 	Global.player.holy_water -= 1
+	Global.play_audio(water_sound, 2, 10)
 	exorcised.emit(self)
 	sprite.frame = 0
 	inter_area.queue_free()
