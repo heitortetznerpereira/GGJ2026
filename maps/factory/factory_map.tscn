@@ -3,13 +3,16 @@
 [ext_resource type="Script" uid="uid://grrl5h1qrhem" path="res://maps/map.gd" id="1_451m2"]
 [ext_resource type="Texture2D" uid="uid://c3bkvxl0jrarw" path="res://assets/tilesets/tilesetFabrica.png" id="2_lp18q"]
 [ext_resource type="PackedScene" uid="uid://b51tkcnke32fs" path="res://player/player.tscn" id="3_sgsko"]
+[ext_resource type="TileSet" uid="uid://b6y2ac3e1gqyn" path="res://maps/stairs_tile.tres" id="4_hi5j0"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sgsko"]
 texture = ExtResource("2_lp18q")
 0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:0/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_hi5j0"]
+physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_sgsko")
 
 [node name="FactoryMap" type="Node2D" unique_id=1401396965 node_paths=PackedStringArray("tile_map", "player")]
@@ -21,6 +24,9 @@ metadata/_custom_type_script = "uid://grrl5h1qrhem"
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1886072118]
 tile_map_data = PackedByteArray("AAD8/wAAAAAAAAAAAAD9/wAAAAAAAAAAAAD+/wAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAACAAAAAAAAAAAAAAADAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAFAAAAAAAAAAAAAAAGAAAAAAAAAAAAAAAHAAAAAAAAAAAAAAD9//v/AAABAAAAAAD9//z/AAABAAAAAAD9//3/AAABAAAAAAD9//7/AAABAAAAAAD9////AAABAAAAAAD+//v/AAABAAAAAAD+//z/AAABAAAAAAD+//3/AAABAAAAAAD+//7/AAABAAAAAAD+////AAABAAAAAAD///v/AAABAAAAAAD///z/AAABAAAAAAD///3/AAABAAAAAAD///7/AAABAAAAAAD/////AAABAAAAAAAAAPv/AAABAAAAAAAAAPz/AAABAAAAAAAAAP3/AAABAAAAAAAAAP7/AAABAAAAAAAAAP//AAABAAAAAAABAPv/AAABAAAAAAABAPz/AAABAAAAAAABAP3/AAABAAAAAAABAP7/AAABAAAAAAABAP//AAABAAAAAAACAPv/AAABAAAAAAACAPz/AAABAAAAAAACAP3/AAABAAAAAAACAP7/AAABAAAAAAACAP//AAABAAAAAAADAPv/AAABAAAAAAADAPz/AAABAAAAAAADAP3/AAABAAAAAAADAP7/AAABAAAAAAADAP//AAABAAAAAAAEAPv/AAABAAAAAAAEAPz/AAABAAAAAAAEAP3/AAABAAAAAAAEAP7/AAABAAAAAAAEAP//AAABAAAAAAAFAPv/AAABAAAAAAAFAPz/AAABAAAAAAAFAP3/AAABAAAAAAAFAP7/AAABAAAAAAAFAP//AAABAAAAAAAGAPv/AAABAAAAAAAGAPz/AAABAAAAAAAGAP3/AAABAAAAAAAGAP7/AAABAAAAAAAGAP//AAABAAAAAAD8//v/AAAAAAAAAAD8//z/AAAAAAAAAAD8//3/AAAAAAAAAAD8//7/AAAAAAAAAAD8////AAAAAAAAAAD8//r/AAAAAAAAAAD9//r/AAAAAAAAAAD+//r/AAAAAAAAAAD///r/AAAAAAAAAAAAAPr/AAAAAAAAAAABAPr/AAAAAAAAAAACAPr/AAAAAAAAAAADAPr/AAAAAAAAAAAEAPr/AAAAAAAAAAAFAPr/AAAAAAAAAAAGAPr/AAAAAAAAAAAHAPr/AAAAAAAAAAAHAPv/AAAAAAAAAAAHAPz/AAAAAAAAAAAHAP3/AAAAAAAAAAAHAP7/AAAAAAAAAAAHAP//AAAAAAAAAAA=")
 tile_set = SubResource("TileSet_hi5j0")
+
+[node name="Stairs" type="TileMapLayer" parent="." unique_id=1049102010]
+tile_set = ExtResource("4_hi5j0")
 
 [node name="Player" parent="." unique_id=910214005 instance=ExtResource("3_sgsko")]
 position = Vector2(-32, -24)

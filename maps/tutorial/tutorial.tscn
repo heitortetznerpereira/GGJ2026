@@ -18,6 +18,7 @@ texture = ExtResource("2_j35kk")
 texture = ExtResource("3_vk34k")
 0:0/0 = 0
 1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
 [sub_resource type="TileSet" id="TileSet_2ej1k"]
 physics_layer_0/collision_layer = 1
@@ -40,7 +41,7 @@ tile_set = SubResource("TileSet_2ej1k")
 tile_map_data = PackedByteArray("AAAgAP7/AAAAAAAAAAAgAP3/AAAAAAAAAAAgAPz/AAAAAAAAAAAgAPv/AAAAAAAAAAAmAP7/AAAAAAAAAAAmAP3/AAAAAAAAAAAmAPz/AAAAAAAAAAAmAPv/AAAAAAAAAAA=")
 tile_set = ExtResource("3_tfvnq")
 
-[node name="labels" type="Node" parent="." unique_id=1808889270]
+[node name="labels" type="Node2D" parent="." unique_id=1965646280]
 
 [node name="Welcoming" type="Label" parent="labels" unique_id=9969941]
 modulate = Color(0, 0, 0, 1)
