@@ -17,6 +17,7 @@ var weapon : Weapon
 
 func _ready() -> void:
 	Global.player = self
+	
 
 
 func _physics_process(delta: float) -> void:
