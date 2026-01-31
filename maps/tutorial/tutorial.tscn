@@ -46,10 +46,10 @@ horizontal_alignment = 1
 autowrap_mode = 3
 
 [node name="press D" type="Label" parent="labels" unique_id=1057114169]
-offset_left = 26.0
-offset_top = -87.0
-offset_right = 194.0
-offset_bottom = -5.0
+offset_left = 24.0
+offset_top = -88.0
+offset_right = 238.0
+offset_bottom = -6.0
 theme_override_colors/font_color = Color(1, 0, 0, 1)
 text = "Press \"D\" or \"RIGHT ARROW\" to move to the right
 Press \"A\" or \"LEFT ARROW\" to move to the left "
