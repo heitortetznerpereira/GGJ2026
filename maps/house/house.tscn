@@ -108,7 +108,7 @@ metadata/_custom_type_script = "uid://0k4m2jvpriua"
 position = Vector2(-41, -12)
 
 [node name="Key" parent="." unique_id=1203054507 instance=ExtResource("12_irhfw")]
-position = Vector2(175, -25)
+position = Vector2(24, -25)
 
 [node name="Phantom" parent="." unique_id=1524485945 instance=ExtResource("13_g3adq")]
 modulate = Color(0.15734369, 0.77911025, 0.99999994, 1)
@@ -124,7 +124,7 @@ position = Vector2(256, -245)
 position = Vector2(57, -342)
 
 [node name="Knife" parent="Weapons" unique_id=111442576 instance=ExtResource("15_7s3cq")]
-position = Vector2(167, -183)
+position = Vector2(158, -185)
 
 [node name="BearTrap" parent="Weapons" unique_id=299508110 instance=ExtResource("16_5pw05")]
 position = Vector2(80, -240)
