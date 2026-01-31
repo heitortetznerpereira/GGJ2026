@@ -52,6 +52,7 @@ func move(delta : float):
 		Input.get_axis("move_left", "move_right"),
 		Input.get_axis("move_up", "move_down")
 	)
+	
 	velocity.x = input_dir.x * speed
 	if stairs_area.has_overlapping_bodies() and input_dir.y:
 		velocity.y = input_dir.y * speed
