@@ -7,6 +7,17 @@ extends CharacterBody2D
 var picked := false
 
 
+func _ready() -> void:
+	hide()
+	add_to_group("weapon")
+	inter_area.monitoring = false
+
+
+func activate():
+	inter_area.monitoring = true
+	show()
+
+
 func pick():
 	picked = true
 	collision_layer = 0

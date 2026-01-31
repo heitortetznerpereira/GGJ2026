@@ -16,5 +16,7 @@ func start_re():
 	monster.global_position = phantom.global_position
 	monster.speed = speed
 	monster.health = health
+	for w in get_tree().get_nodes_in_group("weapon"):
+		w.activate()
 	await get_tree().create_timer(delay).timeout
 	add_child(monster)

@@ -1,10 +1,10 @@
 [gd_scene format=4 uid="uid://dhabjv545ouwt"]
 
-[ext_resource type="Script" uid="uid://grrl5h1qrhem" path="res://maps/house/map.gd" id="1_h04c8"]
+[ext_resource type="Script" uid="uid://grrl5h1qrhem" path="res://maps/map.gd" id="1_h04c8"]
 [ext_resource type="PackedScene" uid="uid://prs83wb4vj4p" path="res://monsters/re_monster/re_monster.tscn" id="2_bnirl"]
 [ext_resource type="Texture2D" uid="uid://dvhogmvwldond" path="res://assets/tilesets/spr_tileset_b.png" id="2_cplqv"]
 [ext_resource type="PackedScene" uid="uid://b51tkcnke32fs" path="res://player/player.tscn" id="2_yploq"]
-[ext_resource type="TileSet" uid="uid://b6y2ac3e1gqyn" path="res://maps/house/stairs_tile.tres" id="3_dfo5w"]
+[ext_resource type="TileSet" uid="uid://b6y2ac3e1gqyn" path="res://maps/stairs_tile.tres" id="3_dfo5w"]
 [ext_resource type="PackedScene" uid="uid://bu17uw1f2baw8" path="res://monsters/phantom/phantom.tscn" id="6_f1shy"]
 [ext_resource type="Script" uid="uid://0k4m2jvpriua" path="res://monsters/re_monster/re_manager.gd" id="8_onapj"]
 [ext_resource type="PackedScene" uid="uid://b3to25tjblx6v" path="res://weapons/shotgun.tscn" id="9_yl56a"]

@@ -13,6 +13,7 @@ const BASE_SPEED : float = 60
 var speed := BASE_SPEED
 var mouse_pos : Vector2
 var weapon : Weapon
+var boards : int
 
 
 func _ready() -> void:
