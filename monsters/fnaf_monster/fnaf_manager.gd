@@ -12,11 +12,14 @@ var curr_window : GWindow
 
 func _ready() -> void:
 	windows.assign(get_tree().get_nodes_in_group("window"))
+	change_timer.wait_time = change_time
+	change_timer.timeout.connect(try_move)
 
 
 func start_fnaf():
 	for w in windows:
 		w.start()
+	change_timer.start()
 
 
 func try_move():

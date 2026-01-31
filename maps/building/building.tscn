@@ -53,6 +53,7 @@ position = Vector2(136, -104)
 [node name="FNAFManager" type="Node" parent="." unique_id=1518073252 node_paths=PackedStringArray("change_timer")]
 script = ExtResource("9_xsgik")
 change_timer = NodePath("Timer")
+move_chance = 1.0
 metadata/_custom_type_script = "uid://beubheh72i3wv"
 
 [node name="Timer" type="Timer" parent="FNAFManager" unique_id=2018354385]
@@ -61,6 +62,12 @@ metadata/_custom_type_script = "uid://beubheh72i3wv"
 
 [node name="Window" parent="Windows" unique_id=1731726047 instance=ExtResource("10_xsgik")]
 position = Vector2(88, -80)
+
+[node name="Window2" parent="Windows" unique_id=124341518 instance=ExtResource("10_xsgik")]
+position = Vector2(184, -80)
+
+[node name="Window3" parent="Windows" unique_id=2138039262 instance=ExtResource("10_xsgik")]
+position = Vector2(104, -16)
 
 [node name="Player" parent="." unique_id=910214005 instance=ExtResource("2_yploq")]
 position = Vector2(24, -24)
