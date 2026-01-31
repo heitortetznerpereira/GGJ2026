@@ -1,9 +1,0 @@
-[gd_scene format=3 uid="uid://ccx0q5evef8c5"]
-
-[ext_resource type="Script" uid="uid://bcnxwyus0kc30" path="res://maps/items/window.gd" id="1_ihw7k"]
-
-[node name="GWindow" type="Area2D" unique_id=1135288999]
-script = ExtResource("1_ihw7k")
-metadata/_custom_type_script = "uid://bcnxwyus0kc30"
-
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1470243763]

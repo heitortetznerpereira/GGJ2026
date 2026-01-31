@@ -13,7 +13,7 @@ const BASE_SPEED : float = 60
 var speed := BASE_SPEED
 var mouse_pos : Vector2
 var weapon : Weapon
-var boards : int
+var boards : int = 3
 
 
 func _ready() -> void:
@@ -64,6 +64,11 @@ func mask_opt():
 func start_re():
 	speed = BASE_SPEED
 	Global.map.start_re()
+
+
+func start_fnaf():
+	speed = BASE_SPEED
+	Global.map.start_fnaf()
 
 
 func show_inter(text : String):

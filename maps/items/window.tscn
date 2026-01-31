@@ -1,12 +1,26 @@
 [gd_scene format=3 uid="uid://be6qw8hnthmbj"]
 
-[ext_resource type="Texture2D" uid="uid://d3v8eynat77lb" path="res://assets/sprites/icon.svg" id="1_1wwo3"]
 [ext_resource type="Script" uid="uid://bcnxwyus0kc30" path="res://maps/items/window.gd" id="1_rgri1"]
+[ext_resource type="Texture2D" uid="uid://bwefhtyclbmox" path="res://Janela.png" id="2_rgri1"]
+[ext_resource type="PackedScene" uid="uid://set3xnimmnl3" path="res://util/inter_area.tscn" id="3_j74v0"]
 
-[node name="Window" type="Area2D" unique_id=1731726047]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n6xql"]
+size = Vector2(16, 16)
+
+[node name="Window" type="Area2D" unique_id=1731726047 node_paths=PackedStringArray("sprite", "inter_area") groups=["window"]]
 script = ExtResource("1_rgri1")
+sprite = NodePath("Sprite2D")
+inter_area = NodePath("InterArea")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1649583254]
 position = Vector2(0, -16)
-scale = Vector2(0.125, 0.25)
-texture = ExtResource("1_1wwo3")
+texture = ExtResource("2_rgri1")
+hframes = 2
+vframes = 3
+
+[node name="InterArea" parent="." unique_id=1387767846 instance=ExtResource("3_j74v0")]
+text = "PRESS 'E' TO INTERACT"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InterArea" unique_id=136878820]
+position = Vector2(0, -8)
+shape = SubResource("RectangleShape2D_n6xql")

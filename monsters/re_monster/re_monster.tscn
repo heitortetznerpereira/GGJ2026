@@ -8,7 +8,7 @@ size = Vector2(32, 32)
 
 [node name="REMonster" type="Area2D" unique_id=161077751]
 collision_layer = 16
-collision_mask = 0
+collision_mask = 4
 script = ExtResource("1_py71m")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1311285311]

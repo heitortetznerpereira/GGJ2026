@@ -22,6 +22,7 @@ func _on_ex_btn_pressed() -> void:
 
 
 func _on_fnaf_btn_pressed() -> void:
+	player.start_fnaf()
 	masks.hide()
 
 

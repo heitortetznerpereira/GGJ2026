@@ -10,8 +10,13 @@ var windows : Array[GWindow]
 var curr_window : GWindow
 
 
+func _ready() -> void:
+	windows.assign(get_tree().get_nodes_in_group("window"))
+
+
 func start_fnaf():
-	pass
+	for w in windows:
+		w.start()
 
 
 func try_move():
@@ -21,9 +26,10 @@ func try_move():
 
 
 func atk_window():
-	if curr_window.state != GWindow.states.BOARD:
-		curr_window.attack()
-		return
-	curr_window.clear()
+	if curr_window:
+		if curr_window.state != GWindow.states.BOARD:
+			curr_window.attack()
+			return
+		curr_window.clear()
 	curr_window = windows.pick_random() as GWindow
 	curr_window.danger()

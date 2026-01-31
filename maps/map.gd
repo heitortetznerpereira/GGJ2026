@@ -4,7 +4,8 @@ extends Node2D
 
 @export var tile_map : TileMapLayer
 @export var player : Player
-@onready var re_manager: REManager = $REManager
+@export var re_manager: REManager
+@export var fnaf_manager : FNAFManager
 
 
 func _ready() -> void:
@@ -14,6 +15,10 @@ func _ready() -> void:
 
 func start_re():
 	re_manager.start_re()
+
+
+func start_fnaf():
+	fnaf_manager.start_fnaf()
 
 
 func game_over():
