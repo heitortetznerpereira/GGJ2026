@@ -17,6 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://nibnusevfc8h" path="res://maps/items/key.tscn" id="15_a684g"]
 [ext_resource type="PackedScene" uid="uid://iolx6jaclvsa" path="res://weapons/knife.tscn" id="16_44n8o"]
 [ext_resource type="PackedScene" uid="uid://ptcjr3me82k0" path="res://maps/items/door.tscn" id="17_jjd4i"]
+[ext_resource type="PackedScene" uid="uid://b0gvs50xhpjt8" path="res://weapons/bear_trap.tscn" id="18_15674"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bju83"]
 texture = ExtResource("2_cplqv")
@@ -115,3 +116,6 @@ position = Vector2(40, -16)
 
 [node name="Knife" parent="." unique_id=111442576 instance=ExtResource("16_44n8o")]
 position = Vector2(200, -88)
+
+[node name="BearTrap" parent="." unique_id=299508110 instance=ExtResource("18_15674")]
+position = Vector2(104, -40)

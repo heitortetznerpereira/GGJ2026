@@ -4,7 +4,8 @@
 [ext_resource type="PackedScene" uid="uid://dhabjv545ouwt" path="res://maps/building/building.tscn" id="2_0xm2m"]
 [ext_resource type="PackedScene" uid="uid://tiglh1n4ldvk" path="res://maps/tutorial/tutorial.tscn" id="3_c651c"]
 [ext_resource type="PackedScene" uid="uid://dauq6tw7wfq61" path="res://maps/hub/hub.tscn" id="3_xwkvk"]
-[ext_resource type="PackedScene" uid="uid://ghjui4aggc3l" path="res://maps/house/house.tscn" id="4_3wy1v"]
+[ext_resource type="PackedScene" uid="uid://dh6rxgp83wfhp" path="res://maps/house/house.tscn" id="4_3wy1v"]
+[ext_resource type="PackedScene" uid="uid://ckex4g7vjpghl" path="res://maps/factory/factory_map.tscn" id="5_kfbq2"]
 
 [node name="Main" type="Node" unique_id=1438083808 node_paths=PackedStringArray("hub")]
 script = ExtResource("1_ig7tw")
@@ -12,5 +13,6 @@ hub = NodePath("HUB")
 b_map = ExtResource("2_0xm2m")
 tutorial = ExtResource("3_c651c")
 h_map = ExtResource("4_3wy1v")
+f_map = ExtResource("5_kfbq2")
 
 [node name="HUB" parent="." unique_id=113184975 instance=ExtResource("3_xwkvk")]

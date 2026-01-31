@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://b0gvs50xhpjt8"]
+
+[ext_resource type="Script" uid="uid://dapgs58c8sife" path="res://weapons/bear_trap.gd" id="1_8sfdl"]
+[ext_resource type="Texture2D" uid="uid://dnuxavsr5adff" path="res://assets/sprites/armadilha urso.png" id="1_rxqc5"]
+[ext_resource type="PackedScene" uid="uid://set3xnimmnl3" path="res://util/inter_area.tscn" id="2_8sfdl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x0ann"]
+size = Vector2(20, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4xxq2"]
+size = Vector2(32, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_in81s"]
+size = Vector2(32, 18)
+
+[node name="BearTrap" type="CharacterBody2D" unique_id=299508110 node_paths=PackedStringArray("damage_area", "sprite", "inter_area")]
+collision_layer = 8
+script = ExtResource("1_8sfdl")
+damage_area = NodePath("DamageArea")
+sprite = NodePath("Sprite2D")
+inter_area = NodePath("InterArea")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=977599772]
+position = Vector2(0, -8)
+texture = ExtResource("1_rxqc5")
+vframes = 3
+frame = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1331209809]
+position = Vector2(0, -8)
+shape = SubResource("RectangleShape2D_x0ann")
+
+[node name="InterArea" parent="." unique_id=1387767846 instance=ExtResource("2_8sfdl")]
+text = "PRESS 'E' TO PICK THE BEAR TRAP"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InterArea" unique_id=1239828059]
+position = Vector2(0, -8)
+shape = SubResource("RectangleShape2D_4xxq2")
+
+[node name="DamageArea" type="Area2D" parent="." unique_id=381924002]
+collision_layer = 0
+collision_mask = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DamageArea" unique_id=1676333950]
+position = Vector2(0, -9)
+shape = SubResource("RectangleShape2D_in81s")
+debug_color = Color(0.99013454, 0, 0.28769624, 0.41960785)
