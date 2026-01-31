@@ -19,3 +19,4 @@ f_map = ExtResource("5_kfbq2")
 [node name="HUB" parent="." unique_id=113184975 instance=ExtResource("3_xwkvk")]
 
 [node name="GameOver" parent="." unique_id=1823599069 instance=ExtResource("7_4dugh")]
+visible = false
