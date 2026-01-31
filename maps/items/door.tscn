@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://ptcjr3me82k0"]
 
 [ext_resource type="Script" uid="uid://b04nwpgngqfpc" path="res://maps/items/door.gd" id="1_5g6se"]
-[ext_resource type="Texture2D" uid="uid://d3v8eynat77lb" path="res://assets/sprites/icon.svg" id="1_dman4"]
+[ext_resource type="Texture2D" uid="uid://cud42olx1m21m" path="res://porta.png" id="2_5g6se"]
 [ext_resource type="PackedScene" uid="uid://set3xnimmnl3" path="res://util/inter_area.tscn" id="2_ahnnl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ahnnl"]
@@ -13,8 +13,7 @@ inter_area = NodePath("InterArea")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=275029075]
 position = Vector2(0, -16)
-scale = Vector2(0.125, 0.25)
-texture = ExtResource("1_dman4")
+texture = ExtResource("2_5g6se")
 
 [node name="InterArea" parent="." unique_id=1387767846 instance=ExtResource("2_ahnnl")]
 text = "PRESS 'E' TO EXIT"
