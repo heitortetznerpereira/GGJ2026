@@ -2,6 +2,7 @@ class_name FNAFManager
 extends Node
 
 
+@export var phantom : Phantom
 @export var change_timer : Timer
 @export var change_time : float = 5
 @export_range(0, 1, 0.1) var move_chance : float = 0.5
@@ -17,6 +18,7 @@ func _ready() -> void:
 
 
 func start_fnaf():
+	phantom.queue_free()
 	for w in windows:
 		w.start()
 	change_timer.start()

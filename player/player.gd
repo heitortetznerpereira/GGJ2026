@@ -83,3 +83,9 @@ func hide_inter():
 
 func equip_weapon(new_weapon : Weapon):
 	weapon = new_weapon
+
+
+func drop_weapon():
+	if weapon:
+		weapon.drop()
+	weapon = null
