@@ -40,14 +40,16 @@ func change_state(new_state : states):
 
 func danger():
 	in_danger = true
+	sprite.modulate = Color.RED
 	if state != states.BOARD:
 		change_state(states.DANGER)		
 
 
 func clear():
+	sprite.modulate = Color.WHITE
 	if state != states.BOARD:
 		state = states.NORMAL
-		in_danger = false
+	in_danger = false
 
 
 func board():
@@ -79,3 +81,7 @@ func check_board():
 		elif Global.player.boards >= 1:
 			board()
 			Global.player.boards -= 1
+
+
+func attack():
+	print("attack window")

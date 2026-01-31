@@ -2,6 +2,7 @@ class_name FNAFManager
 extends Node
 
 
+@export var phantom : Phantom
 @export var change_timer : Timer
 @export var change_time : float = 5
 @export_range(0, 1, 0.1) var move_chance : float = 0.5
@@ -12,11 +13,15 @@ var curr_window : GWindow
 
 func _ready() -> void:
 	windows.assign(get_tree().get_nodes_in_group("window"))
+	change_timer.wait_time = change_time
+	change_timer.timeout.connect(try_move)
 
 
 func start_fnaf():
+	phantom.queue_free()
 	for w in windows:
 		w.start()
+	change_timer.start()
 
 
 func try_move():

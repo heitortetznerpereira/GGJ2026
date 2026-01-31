@@ -2,7 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< HEAD
 uid="uid://0wqwm4n174ot"
+=======
+uid="uid://bqh1ox0am181k"
+>>>>>>> 207a857f4b8ff755a2b426bec80038527ce613aa
 path="res://.godot/imported/Mascaras-2.png.png-e0922925811ccdd064c05fa0ec33dc35.ctex"
 metadata={
 "vram_texture": false

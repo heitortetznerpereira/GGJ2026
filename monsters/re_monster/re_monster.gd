@@ -1,6 +1,7 @@
 class_name REMonster
 extends Area2D
 
+signal died()
 
 var speed : float = 40
 var velocity : Vector2
@@ -26,4 +27,5 @@ func _on_body_entered(body: Node2D) -> void:
 func take_damage(dam : float):
 	health -= dam
 	if health <= 0:
+		died.emit()
 		queue_free()

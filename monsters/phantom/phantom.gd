@@ -10,7 +10,3 @@ func _process(delta: float) -> void:
 		"interact"
 	) and inter_area.player_on:
 		Global.player.mask_opt()
-
-
-func destroy():
-	queue_free()
