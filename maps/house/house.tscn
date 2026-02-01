@@ -61,7 +61,7 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_3d8si")
 sources/1 = SubResource("TileSetAtlasSource_8pi7f")
 
-[node name="House" type="Node2D" unique_id=202776420 node_paths=PackedStringArray("tile_map", "re_manager", "fnaf_manager", "exorcism_manager", "key")]
+[node name="House" type="Node2D" unique_id=202776420 node_paths=PackedStringArray("tile_map", "player", "re_manager", "fnaf_manager", "exorcism_manager", "key")]
 script = ExtResource("1_t2c8o")
 tile_map = NodePath("TileMapLayer")
 player = NodePath("Player")
