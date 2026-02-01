@@ -1,9 +1,12 @@
 [gd_scene format=3 uid="uid://bu17uw1f2baw8"]
 
 [ext_resource type="Script" uid="uid://wpabcmy42e6d" path="res://monsters/phantom/phantom.gd" id="1_xr567"]
-[ext_resource type="Texture2D" uid="uid://5r08yprhjnlr" path="res://assets/sprites/Altar.png" id="2_q5ps1"]
+[ext_resource type="Texture2D" uid="uid://wrui84sj6f7d" path="res://assets/sprites/altar/altar.png" id="2_87ov7"]
 [ext_resource type="Texture2D" uid="uid://ddelfaws5g5j4" path="res://assets/sprites/fantasma.png" id="2_ykdrl"]
+[ext_resource type="Texture2D" uid="uid://clyukhdisiqf2" path="res://assets/sprites/altar/mascaraAzul.png" id="3_b6ibh"]
 [ext_resource type="Script" uid="uid://icjf04lt7x84" path="res://util/inter_area.gd" id="3_fibky"]
+[ext_resource type="Texture2D" uid="uid://kttu0q0ln3qu" path="res://assets/sprites/altar/mascaraVermelha.png" id="4_2chg6"]
+[ext_resource type="Texture2D" uid="uid://cjjms1f4v0a02" path="res://assets/sprites/altar/mascaraAmarela.png" id="5_yjwrn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ykdrl"]
 size = Vector2(64, 32)
@@ -16,7 +19,19 @@ inter_area = NodePath("InterArea")
 
 [node name="Sprite2D2" type="Sprite2D" parent="." unique_id=1666842824]
 position = Vector2(24, -16)
-texture = ExtResource("2_q5ps1")
+texture = ExtResource("2_87ov7")
+
+[node name="bluemask" type="Sprite2D" parent="." unique_id=1480480834]
+position = Vector2(38, -23)
+texture = ExtResource("3_b6ibh")
+
+[node name="redmask" type="Sprite2D" parent="." unique_id=1646975493]
+position = Vector2(24, -23)
+texture = ExtResource("4_2chg6")
+
+[node name="yellowmask" type="Sprite2D" parent="." unique_id=1153738439]
+position = Vector2(10, -23)
+texture = ExtResource("5_yjwrn")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=220380501]
 position = Vector2(0, -16)
@@ -31,5 +46,5 @@ text = "PRESS 'E' TO CHOOSE THE MASK"
 metadata/_custom_type_script = "uid://icjf04lt7x84"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InterArea" unique_id=1097564014]
-position = Vector2(16, -16)
+position = Vector2(17, -16)
 shape = SubResource("RectangleShape2D_ykdrl")
