@@ -77,7 +77,7 @@ metadata/_custom_type_script = "uid://0k4m2jvpriua"
 position = Vector2(24, -16)
 
 [node name="Key" parent="." unique_id=1203054507 instance=ExtResource("9_qysjt")]
-position = Vector2(96, -32)
+position = Vector2(48, -24)
 
 [node name="Phantom" parent="." unique_id=1524485945 instance=ExtResource("10_2qju6")]
 position = Vector2(328, -64)
