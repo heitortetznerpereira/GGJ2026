@@ -15,6 +15,7 @@
 [ext_resource type="Script" uid="uid://b4yq0qxffgf86" path="res://monsters/exorcism_monster/exorcism_manager.gd" id="12_mi8m4"]
 [ext_resource type="PackedScene" uid="uid://bosb4etqkxqeq" path="res://maps/items/clock.tscn" id="14_jfx8p"]
 [ext_resource type="PackedScene" uid="uid://nibnusevfc8h" path="res://maps/items/key.tscn" id="15_a684g"]
+[ext_resource type="PackedScene" uid="uid://c8pumefvwve4f" path="res://maps/items/candle.tscn" id="15_u5b0y"]
 [ext_resource type="PackedScene" uid="uid://iolx6jaclvsa" path="res://weapons/knife.tscn" id="16_44n8o"]
 [ext_resource type="PackedScene" uid="uid://ptcjr3me82k0" path="res://maps/items/door.tscn" id="17_jjd4i"]
 [ext_resource type="PackedScene" uid="uid://b0gvs50xhpjt8" path="res://weapons/bear_trap.tscn" id="18_15674"]
@@ -67,7 +68,7 @@ position = Vector2(98, -89)
 [node name="FNAFManager" type="Node" parent="." unique_id=1518073252 node_paths=PackedStringArray("change_timer", "phantom")]
 script = ExtResource("9_xsgik")
 change_timer = NodePath("Timer")
-move_chance = 1.0
+change_time = 60.0
 time = 4.0
 phantom = NodePath("../Phantom")
 monster_scene = ExtResource("9_b06sb")
@@ -85,6 +86,9 @@ position = Vector2(255, -80)
 
 [node name="Window3" parent="Windows" unique_id=2138039262 instance=ExtResource("10_xsgik")]
 position = Vector2(73, -17)
+
+[node name="Window3" parent="Windows/Window3" unique_id=774378440 instance=ExtResource("10_xsgik")]
+position = Vector2(47, -63)
 
 [node name="ExManager" type="Node" parent="." unique_id=964597443 node_paths=PackedStringArray("phantom")]
 script = ExtResource("12_mi8m4")
@@ -107,6 +111,18 @@ position = Vector2(76, -80)
 
 [node name="Clock4" parent="OBJs" unique_id=1652467676 instance=ExtResource("14_jfx8p")]
 position = Vector2(178, -144)
+
+[node name="Candle" parent="OBJs" unique_id=36006439 instance=ExtResource("15_u5b0y")]
+position = Vector2(280, -144)
+
+[node name="Candle2" parent="OBJs" unique_id=2019615975 instance=ExtResource("15_u5b0y")]
+position = Vector2(280, -16)
+
+[node name="Candle3" parent="OBJs" unique_id=273387331 instance=ExtResource("15_u5b0y")]
+position = Vector2(144, -80)
+
+[node name="Candle4" parent="OBJs" unique_id=650497965 instance=ExtResource("15_u5b0y")]
+position = Vector2(88, -144)
 
 [node name="Key" parent="." unique_id=1203054507 instance=ExtResource("15_a684g")]
 position = Vector2(27, -84)

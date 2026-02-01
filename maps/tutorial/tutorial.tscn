@@ -149,7 +149,7 @@ offset_right = 1669.0
 offset_bottom = 56.0
 theme_override_colors/font_color = Color(0, 0, 1, 1)
 theme_override_constants/outline_size = 0
-text = "BEYOND THE DOOR THE CHALLENGES AWAITW..."
+text = "BEYOND THE DOOR THE CHALLENGES AWAITS..."
 horizontal_alignment = 1
 autowrap_mode = 3
 
@@ -160,4 +160,4 @@ position = Vector2(32, -16)
 position = Vector2(1616, -16)
 
 [node name="Player" parent="." unique_id=910214005 instance=ExtResource("4_j35kk")]
-position = Vector2(32, -16)
+position = Vector2(32, -18)
