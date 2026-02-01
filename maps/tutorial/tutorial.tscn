@@ -73,7 +73,7 @@ offset_right = 383.0
 offset_bottom = 86.0
 theme_override_colors/font_color = Color(0, 0, 1, 1)
 theme_override_constants/outline_size = 0
-text = "TO ESCAPE THIS PURGATORY YOU MUST GET ALL 3 KEYS OF THE MASKED GHOULS."
+text = "TO ESCAPE THIS PURGATORY YOU MUST GET ALL 3 KEYS OF THE MASKED GHOSTS."
 horizontal_alignment = 1
 autowrap_mode = 3
 
@@ -106,7 +106,7 @@ offset_right = 1128.0
 offset_bottom = -31.0
 theme_override_colors/font_color = Color(1, 0, 0, 1)
 theme_override_constants/outline_size = 0
-text = "FOR EACH LEVEL, YOU WILL NEED TO OBTAIN IT'S KEY AND COMPLETE A CHALLENGE ACCORDING TO THE MASKED GHOUL CHOSEN. (A GHOUL CANNOT BE CHOSEN MORE THAN ONCE)"
+text = "FOR EACH LEVEL, YOU WILL NEED TO OBTAIN IT'S KEY AND COMPLETE A CHALLENGE ACCORDING TO THE MASKED GHOST CHOSEN. (NEITHER A GHOST NOR A MASK CAN BE CHOSEN MORE THAN ONCE)"
 autowrap_mode = 3
 
 [node name="redmask" type="Label" parent="labels" unique_id=1501209783]
@@ -149,7 +149,7 @@ offset_right = 1669.0
 offset_bottom = 56.0
 theme_override_colors/font_color = Color(0, 0, 1, 1)
 theme_override_constants/outline_size = 0
-text = "BEHIND THE DOOR A TOUGH CHALLENGE AWAITS..."
+text = "BEYOND THE DOOR THE CHALLENGES AWAITW..."
 horizontal_alignment = 1
 autowrap_mode = 3
 

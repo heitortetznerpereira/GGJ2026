@@ -11,6 +11,7 @@ var map : Map
 @export var game_over : GameOver
 @export var game_over_sound : AudioStream
 @export var victory : Victory
+@export var victory_sound : AudioStream
 
 
 func _ready() -> void:
@@ -44,5 +45,6 @@ func goto_gameover():
 
 
 func goto_victory():
+	Global.play_audio(victory_sound, 0.5, -5)
 	hub.hide()
 	victory.show()

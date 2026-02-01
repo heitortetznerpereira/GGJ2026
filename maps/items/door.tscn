@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://b04nwpgngqfpc" path="res://maps/items/door.gd" id="1_5g6se"]
 [ext_resource type="Texture2D" uid="uid://cud42olx1m21m" path="res://porta.png" id="2_5g6se"]
 [ext_resource type="PackedScene" uid="uid://set3xnimmnl3" path="res://util/inter_area.tscn" id="2_ahnnl"]
+[ext_resource type="AudioStream" uid="uid://b4loe5up58r0w" path="res://assets/sound/door.wav" id="2_wpja2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ahnnl"]
 size = Vector2(16, 18)
@@ -10,6 +11,7 @@ size = Vector2(16, 18)
 [node name="Door" type="Node2D" unique_id=814041143 node_paths=PackedStringArray("inter_area") groups=["door"]]
 script = ExtResource("1_5g6se")
 inter_area = NodePath("InterArea")
+sound = ExtResource("2_wpja2")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=275029075]
 position = Vector2(0, -16)

@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://c8pumefvwve4f"]
+
+[ext_resource type="Script" uid="uid://bncxnvhbrsyr8" path="res://maps/items/obj.gd" id="1_6r1xb"]
+[ext_resource type="Texture2D" uid="uid://b3w8b4phft2cm" path="res://assets/sprites/spr_candle.png" id="2_hoxec"]
+[ext_resource type="PackedScene" uid="uid://set3xnimmnl3" path="res://util/inter_area.tscn" id="3_hoxec"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hoxec"]
+size = Vector2(16, 8)
+
+[node name="Candle" type="Node2D" unique_id=36006439 node_paths=PackedStringArray("sprite", "inter_area")]
+script = ExtResource("1_6r1xb")
+sprite = NodePath("Sprite2D")
+inter_area = NodePath("InterArea")
+metadata/_custom_type_script = "uid://bncxnvhbrsyr8"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=506018285]
+position = Vector2(0, -8)
+texture = ExtResource("2_hoxec")
+vframes = 2
+
+[node name="InterArea" parent="." unique_id=1387767846 instance=ExtResource("3_hoxec")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InterArea" unique_id=1849439664]
+position = Vector2(0, -4)
+shape = SubResource("RectangleShape2D_hoxec")

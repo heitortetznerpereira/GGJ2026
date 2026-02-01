@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://dh6rxgp83wfhp" path="res://maps/house/house.tscn" id="4_3wy1v"]
 [ext_resource type="PackedScene" uid="uid://ckex4g7vjpghl" path="res://maps/factory/factory_map.tscn" id="5_kfbq2"]
 [ext_resource type="AudioStream" uid="uid://b5hosnasvj28w" path="res://assets/sound/game_over.wav" id="6_67ri8"]
+[ext_resource type="AudioStream" uid="uid://b6oi5u6cvdgw1" path="res://assets/sound/victory.wav" id="7_0i4oc"]
 [ext_resource type="PackedScene" uid="uid://d222xgfo4ooer" path="res://maps/win_lose/game_over.tscn" id="7_4dugh"]
 [ext_resource type="PackedScene" uid="uid://8yia5j66f4xu" path="res://maps/win_lose/victory.tscn" id="9_grrlh"]
 
@@ -20,6 +21,7 @@ f_map = ExtResource("5_kfbq2")
 game_over = NodePath("GameOver")
 game_over_sound = ExtResource("6_67ri8")
 victory = NodePath("Victory")
+victory_sound = ExtResource("7_0i4oc")
 
 [node name="HUB" parent="." unique_id=113184975 instance=ExtResource("3_xwkvk")]
 visible = false

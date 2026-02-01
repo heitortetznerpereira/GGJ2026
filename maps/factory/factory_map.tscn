@@ -18,6 +18,7 @@
 [ext_resource type="PackedScene" uid="uid://be6qw8hnthmbj" path="res://maps/items/window.tscn" id="15_6536v"]
 [ext_resource type="PackedScene" uid="uid://b0gvs50xhpjt8" path="res://weapons/bear_trap.tscn" id="15_oqfvb"]
 [ext_resource type="PackedScene" uid="uid://bosb4etqkxqeq" path="res://maps/items/clock.tscn" id="16_6n1bl"]
+[ext_resource type="PackedScene" uid="uid://c8pumefvwve4f" path="res://maps/items/candle.tscn" id="17_oqfvb"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sgsko"]
 texture = ExtResource("2_lp18q")
@@ -107,8 +108,8 @@ position = Vector2(496, -48)
 [node name="Clock3" parent="Objects" unique_id=1871742233 instance=ExtResource("16_6n1bl")]
 position = Vector2(208, -48)
 
-[node name="Clock" parent="Objects/Clock3" unique_id=667143208 instance=ExtResource("16_6n1bl")]
-position = Vector2(184, 0)
+[node name="Candle" parent="Objects" unique_id=36006439 instance=ExtResource("17_oqfvb")]
+position = Vector2(392, -48)
 
 [node name="windows" type="Node2D" parent="." unique_id=635995289]
 

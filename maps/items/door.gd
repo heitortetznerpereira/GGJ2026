@@ -3,6 +3,7 @@ extends Node2D
 
 
 @export var inter_area : InterArea
+@export var sound : AudioStream
 
 var locked := false
 
@@ -24,4 +25,5 @@ func _process(delta: float) -> void:
 		"interact"
 	) and inter_area.player_on:
 		if not locked:
+			Global.play_audio(sound, 1.2)
 			Global.main.goto_hub()

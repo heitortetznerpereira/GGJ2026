@@ -2,7 +2,7 @@ class_name Knife
 extends Weapon
 
 
-const DAMAGE : float = 10
+const DAMAGE : float = 3
 const STUN : float = 3
 
 @export var ray : RayCast2D
