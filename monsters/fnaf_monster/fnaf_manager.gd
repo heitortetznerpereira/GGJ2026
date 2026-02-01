@@ -37,7 +37,7 @@ func try_move():
 
 
 func atk_window():
-	Global.play_audio(laugh, 2)
+	Global.play_audio(laugh, 2, -10)
 	if curr_window:
 		if curr_window.state != GWindow.states.BOARD:
 			monster = monster_scene.instantiate()

@@ -43,7 +43,7 @@ func win():
 	key.start()
 	Global.audio.stop()
 	Global.audio.stream = key_sound
-	Global.audio.pitch_scale = 2
+	Global.audio.pitch_scale = 1
 	Global.audio.play()
 
 

@@ -29,7 +29,7 @@ func haunt():
 
 func exorcise():
 	Global.player.holy_water -= 1
-	Global.play_audio(water_sound, 2, 10)
+	Global.play_audio(water_sound, 2, 0)
 	exorcised.emit(self)
 	sprite.frame = 0
 	inter_area.queue_free()
