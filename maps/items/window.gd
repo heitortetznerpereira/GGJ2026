@@ -61,10 +61,7 @@ func clear():
 func board():
 	boarded = true
 	change_state(states.BOARD)
-	Global.audio.stop()
-	Global.audio.stream = hammer_sound
-	Global.audio.pitch_scale = 2
-	Global.audio.play()
+	Global.play_audio(hammer_sound, 2, 5)
 
 
 func unboard():
