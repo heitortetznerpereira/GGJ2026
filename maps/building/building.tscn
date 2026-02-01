@@ -68,8 +68,8 @@ position = Vector2(98, -89)
 [node name="FNAFManager" type="Node" parent="." unique_id=1518073252 node_paths=PackedStringArray("change_timer", "phantom")]
 script = ExtResource("9_xsgik")
 change_timer = NodePath("Timer")
-change_time = 60.0
-time = 4.0
+change_time = 4.0
+time = 60.0
 phantom = NodePath("../Phantom")
 monster_scene = ExtResource("9_b06sb")
 metadata/_custom_type_script = "uid://beubheh72i3wv"
